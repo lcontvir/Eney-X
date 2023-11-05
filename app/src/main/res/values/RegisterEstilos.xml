@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RegisterMainTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="RegisterEditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:backgroundTint">#FFFFFF</item>
+    </style>
+
+</resources>
