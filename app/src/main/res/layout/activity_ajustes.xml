@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/PerfilUsuarioFondoDos"
+    tools:context=".activity_Ajustes">
+
+    <ImageButton
+        android:id="@+id/vueltaAtras"
+        android:layout_width="72dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
+       tools:src="@drawable/AjustesFlechaAtras"
+        android:contentDescription="volver atrás" />
+
+    <TextView
+        android:id="@+id/Ajustes"
+        android:layout_width="202dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="34dp"
+        android:text="Ajustes"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Usuario"
+        android:layout_width="186dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="95dp"
+        android:text="Iphonde de Martin "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Ajustes" />
+
+    <ImageView
+        android:id="@+id/ajustes_icono"
+        android:layout_width="58dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/Ajustes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
+        tools:srcCompat="@drawable/PerfilUsuarioAjustes" />
+
+    <ScrollView
+        android:layout_width="388dp"
+        android:layout_height="551dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Usuario">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Ajustes_Usuario"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="#807B7B"
+                android:text="Ajustes del Usuario"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="141dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/modo_nocturno"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:srcCompat="@drawable/AjustesNoche" />
+
+                <Button
+                    android:id="@+id/modo_nocturno_boton"
+                    style="@style/EstiloBotonNaranja"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Modo nocturno"
+                    android:textColor="#3A3737"
+                    tools:layout_editor_absoluteX="18dp"
+                    tools:layout_editor_absoluteY="108dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sonido"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    tools:srcCompat="@drawable/AjustesSonido" />
+
+                <Button
+                    android:id="@+id/sonido_boton"
+                    style="@style/EstiloBotonNaranja"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Sonido"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/brillo_pantalla"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    tools:srcCompat="@drawable/AjustesSol" />
+
+                <Button
+                    android:id="@+id/brillo_pantalla_boton"
+                    style="@style/EstiloBotonNaranja"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Brillo pantalla"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/idioma"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    tools:srcCompat="@drawable/AjustesIdioma" />
+
+                <Button
+                    android:id="@+id/idioma_boton"
+                    style="@style/EstiloBotonNaranja"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Idioma"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/notificaciones"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    tools:srcCompat="@drawable/AjustesNotificacion" />
+
+                <Button
+                    android:id="@+id/notificaciones_boton"
+                    style="@style/EstiloBotonNaranja"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Notificaciones"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Ajustes_Cuenta"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginBottom="16dp"
+                android:background="#807B7B"
+                android:text="Ajustes de la cuenta"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="141dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cerrar_sesion"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    tools:srcCompat="@drawable/AjustesCerrarSesion" />
+
+                <Button
+                    android:id="@+id/cerrar_sesion_boton"
+                    style="@style/EstiloBotonNaranja"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Cerrar sesion"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/politica_privacidad"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    tools:srcCompat="@drawable/AjustesDocumento" />
+
+                <Button
+                    android:id="@+id/politica_privacidad_boton"
+                    style="@style/EstiloBotonNaranja"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Politica de privacidad"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Seguridad"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="#807B7B"
+                android:text="Seguridad"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColor="@color/black"
+                tools:layout_editor_absoluteX="15dp"
+                tools:layout_editor_absoluteY="141dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/estado_seguridad"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    tools:srcCompat="@drawable/AjustesCandado" />
+
+                <Button
+                    android:id="@+id/estado_seguridad_boton"
+                    style="@style/EstiloBotonVerde"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Estado de seguridad"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/contraseñas"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    tools:srcCompat="@drawable/AjustesContraseñas" />
+
+                <Button
+                    android:id="@+id/contraseñas_boton"
+                    style="@style/EstiloBotonVerde"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Contraseñas"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
