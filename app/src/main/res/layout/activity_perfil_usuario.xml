@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/PerfilUsuarioFondoDos"
+    tools:context=".MainActivity"
+
+
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView2"
+        android:layout_width="174dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/PerfilUsuarioFotoCarnet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/EstiloImagenCircular" />
+
+    <TextView
+        android:id="@+id/Nombre_apellido"
+        android:layout_width="184dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Martín Buda"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dispositivo"
+        android:layout_width="185dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Iphone 15"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="184dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="62dp"
+        android:text="BudaCristo69@gmail"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/Nombre_apellido" />
+
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/EstiloBotonRectangular"
+        android:layout_width="184dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:text="Licencias"
+        android:textSize="18dp"
+        android:textColor="#3A3737"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dispositivo" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/EstiloBotonRectangular"
+        android:layout_width="184dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="16dp"
+        android:text="Privacidad"
+        android:textSize="18dp"
+        android:textColor="#3A3737"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/EstiloBotonRectangular"
+        android:layout_width="184dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        android:text="Facturacion"
+        android:textSize="18dp"
+        android:textColor="#3A3737"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/EstiloBotonRectangular"
+        android:layout_width="184dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="18dp"
+        android:text="Dispositivos"
+        android:textSize="18dp"
+        android:textColor="#3A3737"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <ImageButton
+        android:id="@+id/botonCasita"
+        android:layout_width="85dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Botón de casita"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white"
+        tools:src="@drawable/PerfilUsuarioCasa" />
+
+    <ImageButton
+        android:id="@+id/botonCasita7"
+        android:layout_width="85dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Botón de casita"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white"
+        tools:src="@drawable/PerfilUsuarioEscudo" />
+
+    <ImageButton
+        android:id="@+id/botonCasita8"
+        android:layout_width="85dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Botón de casita"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"
+        tools:src="@drawable/PerfilUsuarioAjustes" />
+
+    <Button
+        android:id="@+id/button11"
+        style="@style/EstiloBotonRectangular"
+        android:layout_width="375dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="14dp"
+        android:background="#71DF4A"
+        android:textSize="18dp"
+        android:text="Nosotros"
+        android:textColor="#3A3737"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewSeparator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewSeparator"
+        android:layout_width="450dp"
+        android:layout_height="5dp"
+        android:layout_marginBottom="97dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_bright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewSeparator3"
+        android:layout_width="0.7dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_bright"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSeparator" />
+
+    <ImageView
+        android:id="@+id/imageViewSeparator4"
+        android:layout_width="0.7dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="130dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_bright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSeparator" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
