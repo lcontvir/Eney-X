@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/PerfilUsuarioFondoDos"
+    android:theme="@style/RegisterMainTheme"
+    tools:context=".activity_register">
+
+
+    <ImageView
+        android:id="@+id/IvLogoUax"
+        android:layout_width="175dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/LogoCuboEneyx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toEndOf="@+id/TvTextoTitulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/RegisterMainTheme"
+        android:id="@+id/TvTextoTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="64dp"
+        android:text="Registro"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonRegister"
+        android:layout_width="260dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="76dp"
+        android:backgroundTint="#7D0697"
+        android:text="Registrarse"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvPolitica2" />
+
+    <TextView
+        style="@style/RegisterMainTheme"
+        android:id="@+id/TvPolitica1"
+        android:layout_width="244dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="3dp"
+        android:text="Acepto la Pólitica de Privacidad"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/IvCheckBox1"
+        app:layout_constraintTop_toBottomOf="@+id/EtPasswRepeat" />
+
+    <TextView
+        android:id="@+id/TvPolitica2"
+        style="@style/RegisterMainTheme"
+        android:layout_width="244dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="3dp"
+        android:text="Acepto la Pólitica de Cookies"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/IvCheckBox2"
+        app:layout_constraintTop_toBottomOf="@+id/TvPolitica1" />
+
+    <TextView
+        style="@style/RegisterMainTheme"
+        android:id="@+id/TvNombreYApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="247dp"
+        android:text="Nombre y Apellido"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvTextoTitulo" />
+
+    <EditText
+        android:id="@+id/EtPassw"
+        style="@style/RegisterEditTextTheme"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="25dp"
+        android:inputType="text|textPassword"
+        android:text="********"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvPassw" />
+
+    <EditText
+        android:id="@+id/EtPasswRepeat"
+        style="@style/RegisterEditTextTheme"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="25dp"
+        android:inputType="text|textPassword"
+        android:text="********"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvRepeatPassw" />
+
+    <TextView
+        style="@style/RegisterMainTheme"
+        android:id="@+id/TvPassw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="291dp"
+        android:text="Contraseña"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtMail" />
+
+    <TextView
+        style="@style/RegisterMainTheme"
+        android:id="@+id/TvRepeatPassw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="247dp"
+        android:text="Repita Contraseña"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtPassw" />
+
+    <EditText
+        android:id="@+id/EtMail"
+        style="@style/RegisterEditTextTheme"
+        android:layout_width="341dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:inputType="text|textEmailAddress|textAutoComplete"
+        android:text='Correo Electronico'
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvMail" />
+
+    <TextView
+        style="@style/RegisterMainTheme"
+        android:id="@+id/TvMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="330dp"
+        android:text="Email"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtNombreYApellidos" />
+
+    <EditText
+        android:id="@+id/EtNombreYApellidos"
+        style="@style/RegisterEditTextTheme"
+        android:layout_width="341dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:inputType="text"
+        android:text='Nombre y Apellido'
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvNombreYApellidos" />
+
+    <ImageView
+        android:id="@+id/IvCheckBox1"
+        android:layout_width="23dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="246dp"
+        android:src="@drawable/RegisterCheckbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtPasswRepeat" />
+
+    <ImageView
+        android:id="@+id/IvCheckBox2"
+        android:layout_width="23dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="246dp"
+        android:src="@drawable/RegisterCheckbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IvCheckBox1" />
+
+    <ImageView
+        android:id="@+id/IvTickPass"
+        android:layout_width="25dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="358dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/RegisterChecks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvRepeatPassw" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
