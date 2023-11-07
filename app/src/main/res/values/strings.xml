@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Eney-X</string>
+    <string name="btn_text_profile">Perfil</string>
+    <string name="btn_text_shield">Escudo</string>
+    <string name="btn_text_settings">Ajustes</string>
+    <string name="all_components">All Components</string>
+    <string name="vpn">VPN</string>
+    <string name="passw">PASS W</string>
+    <string name="components">All components</string>
 </resources>
