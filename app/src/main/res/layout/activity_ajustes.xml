@@ -7,30 +7,52 @@
     android:background="@drawable/PerfilUsuarioFondoDos"
     tools:context=".activity_Ajustes">
 
-    <ImageButton
+
+    <ImageView
         android:id="@+id/vueltaAtras"
-        android:layout_width="72dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="62dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="32dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/white"
-       tools:src="@drawable/AjustesFlechaAtras"
-        android:contentDescription="volver atrás" />
+        tools:src="@drawable/flecharellenaRedimensionada" />
+
+    <ImageButton
+        android:id="@+id/Ajustes"
+        android:layout_width="329dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/boton_bordes_blancos"
+        android:contentDescription="Ajustes"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Ajustes"
-        android:layout_width="202dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="34dp"
+        android:id="@+id/AjustesTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="1dp"
         android:text="Ajustes"
         android:textColor="@color/white"
         android:textSize="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/Ajustes"
+        app:layout_constraintTop_toTopOf="@+id/Ajustes" />
+
+
+    <ImageView
+        android:id="@+id/iphone"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="115dp"
+        app:layout_constraintEnd_toStartOf="@+id/Usuario"
+        app:layout_constraintTop_toTopOf="@+id/Ajustes"
+        app:tint="@color/white"
+        tools:srcCompat="@drawable/Iphone" />
 
     <TextView
         android:id="@+id/Usuario"
@@ -90,8 +112,9 @@
 
                 <ImageView
                     android:id="@+id/modo_nocturno"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
@@ -117,8 +140,9 @@
 
                 <ImageView
                     android:id="@+id/sonido"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
@@ -144,8 +168,9 @@
 
                 <ImageView
                     android:id="@+id/brillo_pantalla"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
@@ -171,8 +196,9 @@
 
                 <ImageView
                     android:id="@+id/idioma"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
@@ -198,8 +224,9 @@
 
                 <ImageView
                     android:id="@+id/notificaciones"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
@@ -238,8 +265,9 @@
 
                 <ImageView
                     android:id="@+id/cerrar_sesion"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
@@ -265,8 +293,9 @@
 
                 <ImageView
                     android:id="@+id/politica_privacidad"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
@@ -291,6 +320,7 @@
                 android:layout_height="25dp"
                 android:background="#807B7B"
                 android:text="Seguridad"
+                android:textSize="20dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textColor="@color/black"
@@ -304,8 +334,9 @@
 
                 <ImageView
                     android:id="@+id/estado_seguridad"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
@@ -331,8 +362,9 @@
 
                 <ImageView
                     android:id="@+id/contraseñas"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
