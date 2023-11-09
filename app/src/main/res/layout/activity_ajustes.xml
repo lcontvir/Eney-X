@@ -4,29 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/PerfilUsuarioFondoDos"
+    android:background="@color/background"
     tools:context=".activity_Ajustes">
 
     <ImageButton
         android:id="@+id/vueltaAtras"
-        android:layout_width="72dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="62dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
+        android:contentDescription="volver atrás"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/white"
-       tools:src="@drawable/AjustesFlechaAtras"
-        android:contentDescription="volver atrás" />
+        tools:src="@drawable/AjustesFlechaAtras" />
 
     <TextView
         android:id="@+id/Ajustes"
-        android:layout_width="202dp"
-        android:layout_height="54dp"
+        android:layout_width="329dp"
+        android:layout_height="57dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="34dp"
-        android:text="Ajustes"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/boton_bordes_blancos"
+        android:text="         Ajustes"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,25 +39,16 @@
         android:layout_width="186dp"
         android:layout_height="33dp"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="118dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="95dp"
-        android:text="Iphonde de Martin "
+        android:text="Iphone de Martin "
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Ajustes" />
-
-    <ImageView
-        android:id="@+id/ajustes_icono"
-        android:layout_width="58dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/Ajustes"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/white"
-        tools:srcCompat="@drawable/PerfilUsuarioAjustes" />
 
     <ScrollView
         android:layout_width="388dp"
@@ -64,6 +57,7 @@
         android:layout_marginTop="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/boton_bordes_blancos"
         app:layout_constraintTop_toBottomOf="@+id/Usuario">
 
         <LinearLayout
@@ -73,12 +67,13 @@
 
             <TextView
                 android:id="@+id/Ajustes_Usuario"
+                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:background="#807B7B"
+                android:background="#BFFFFFFF"
+                android:textColor="@color/azulito"
                 android:text="Ajustes del Usuario"
                 android:textAlignment="center"
-                android:textColor="@color/black"
                 android:textSize="20dp"
                 tools:layout_editor_absoluteX="15dp"
                 tools:layout_editor_absoluteY="141dp" />
@@ -86,6 +81,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -94,17 +90,17 @@
                     android:layout_height="60dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
+                    android:layout_marginStart="10dp"
                     app:tint="@color/white"
                     tools:srcCompat="@drawable/AjustesNoche" />
 
                 <Button
                     android:id="@+id/modo_nocturno_boton"
-                    style="@style/EstiloBotonNaranja"
+                    style="@style/EstiloBotonRectangularAzul"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:text="Modo nocturno"
-                    android:textColor="#3A3737"
                     tools:layout_editor_absoluteX="18dp"
                     tools:layout_editor_absoluteY="108dp" />
 
@@ -113,6 +109,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -121,15 +118,16 @@
                     android:layout_height="60dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
+                    android:layout_marginStart="10dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
                     tools:srcCompat="@drawable/AjustesSonido" />
 
                 <Button
                     android:id="@+id/sonido_boton"
-                    style="@style/EstiloBotonNaranja"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
+                    style="@style/EstiloBotonRectangularAzul"
                     android:layout_marginLeft="16dp"
                     android:text="Sonido"
                     tools:layout_editor_absoluteX="86dp"
@@ -140,6 +138,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -150,13 +149,14 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
+                    android:layout_marginStart="10dp"
                     tools:srcCompat="@drawable/AjustesSol" />
 
                 <Button
                     android:id="@+id/brillo_pantalla_boton"
-                    style="@style/EstiloBotonNaranja"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
+                    style="@style/EstiloBotonRectangularAzul"
                     android:layout_marginLeft="16dp"
                     android:text="Brillo pantalla"
                     tools:layout_editor_absoluteX="86dp"
@@ -167,6 +167,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -175,14 +176,15 @@
                     android:layout_height="60dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
+                    android:layout_marginStart="10dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
                     tools:srcCompat="@drawable/AjustesIdioma" />
 
                 <Button
                     android:id="@+id/idioma_boton"
-                    style="@style/EstiloBotonNaranja"
                     android:layout_width="240dp"
+                    style="@style/EstiloBotonRectangularAzul"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:text="Idioma"
@@ -194,6 +196,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -202,16 +205,17 @@
                     android:layout_height="60dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
+                    android:layout_marginStart="10dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
                     tools:srcCompat="@drawable/AjustesNotificacion" />
 
                 <Button
                     android:id="@+id/notificaciones_boton"
-                    style="@style/EstiloBotonNaranja"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
+                    style="@style/EstiloBotonRectangularAzul"
                     android:text="Notificaciones"
                     tools:layout_editor_absoluteX="86dp"
                     tools:layout_editor_absoluteY="47dp" />
@@ -223,10 +227,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
                 android:layout_marginBottom="16dp"
-                android:background="#807B7B"
+                android:background="#BFFFFFFF"
+                android:textColor="@color/azulito"
                 android:text="Ajustes de la cuenta"
                 android:textAlignment="center"
-                android:textColor="@color/black"
                 android:textSize="20dp"
                 tools:layout_editor_absoluteX="15dp"
                 tools:layout_editor_absoluteY="141dp" />
@@ -234,6 +238,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -243,16 +248,17 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
+                    android:layout_marginStart="10dp"
                     tools:layout_editor_absoluteX="178dp"
                     tools:srcCompat="@drawable/AjustesCerrarSesion" />
 
                 <Button
                     android:id="@+id/cerrar_sesion_boton"
-                    style="@style/EstiloBotonNaranja"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:text="Cerrar sesion"
+                    style="@style/EstiloBotonRectangularAzul"
                     tools:layout_editor_absoluteX="86dp"
                     tools:layout_editor_absoluteY="47dp" />
 
@@ -261,6 +267,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -271,14 +278,15 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
+                    android:layout_marginStart="10dp"
                     tools:srcCompat="@drawable/AjustesDocumento" />
 
                 <Button
                     android:id="@+id/politica_privacidad_boton"
-                    style="@style/EstiloBotonNaranja"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
+                    style="@style/EstiloBotonRectangularAzul"
                     android:text="Politica de privacidad"
                     tools:layout_editor_absoluteX="86dp"
                     tools:layout_editor_absoluteY="47dp" />
@@ -289,17 +297,18 @@
                 android:id="@+id/Seguridad"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:background="#807B7B"
+                android:background="#BFFFFFFF"
+                android:textColor="@color/azulito"
+                android:layout_marginBottom="10dp"
                 android:text="Seguridad"
                 android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textColor="@color/black"
                 tools:layout_editor_absoluteX="15dp"
                 tools:layout_editor_absoluteY="141dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -310,11 +319,12 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
+                    android:layout_marginStart="10dp"
                     tools:srcCompat="@drawable/AjustesCandado" />
 
                 <Button
                     android:id="@+id/estado_seguridad_boton"
-                    style="@style/EstiloBotonVerde"
+                    style="@style/EstiloBotonRectangularAzul"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -327,6 +337,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -334,6 +345,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginEnd="16dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
@@ -341,7 +353,7 @@
 
                 <Button
                     android:id="@+id/contraseñas_boton"
-                    style="@style/EstiloBotonVerde"
+                    style="@style/EstiloBotonRectangularAzul"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
