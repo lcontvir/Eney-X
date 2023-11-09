@@ -7,32 +7,53 @@
     android:background="@color/background"
     tools:context=".activity_Ajustes">
 
-    <ImageButton
+
+    <ImageView
         android:id="@+id/vueltaAtras"
         android:layout_width="62dp"
         android:layout_height="50dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="32dp"
         android:background="@android:color/transparent"
         android:contentDescription="volver atrás"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/white"
-        tools:src="@drawable/AjustesFlechaAtras" />
+        tools:src="@drawable/flecharellenaRedimensionada" />
 
-    <TextView
+    <ImageButton
         android:id="@+id/Ajustes"
         android:layout_width="329dp"
         android:layout_height="57dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/boton_bordes_blancos"
-        android:text="         Ajustes"
+        android:contentDescription="Ajustes"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AjustesTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="1dp"
+        android:text="Ajustes"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="@+id/Ajustes"
+        app:layout_constraintTop_toTopOf="@+id/Ajustes" />
+
+
+    <ImageView
+        android:id="@+id/iphone"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="115dp"
+        app:layout_constraintEnd_toStartOf="@+id/Usuario"
+        app:layout_constraintTop_toTopOf="@+id/Ajustes"
+        app:tint="@color/white"
+        tools:srcCompat="@drawable/Iphone" />
 
     <TextView
         android:id="@+id/Usuario"
@@ -86,11 +107,11 @@
 
                 <ImageView
                     android:id="@+id/modo_nocturno"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginStart="10dp"
                     app:tint="@color/white"
                     tools:srcCompat="@drawable/AjustesNoche" />
 
@@ -114,11 +135,11 @@
 
                 <ImageView
                     android:id="@+id/sonido"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginStart="10dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
                     tools:srcCompat="@drawable/AjustesSonido" />
@@ -143,13 +164,13 @@
 
                 <ImageView
                     android:id="@+id/brillo_pantalla"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    android:layout_marginStart="10dp"
                     tools:srcCompat="@drawable/AjustesSol" />
 
                 <Button
@@ -172,11 +193,11 @@
 
                 <ImageView
                     android:id="@+id/idioma"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginStart="10dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
                     tools:srcCompat="@drawable/AjustesIdioma" />
@@ -201,11 +222,11 @@
 
                 <ImageView
                     android:id="@+id/notificaciones"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginStart="10dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
                     tools:srcCompat="@drawable/AjustesNotificacion" />
@@ -243,12 +264,12 @@
 
                 <ImageView
                     android:id="@+id/cerrar_sesion"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
-                    android:layout_marginStart="10dp"
                     tools:layout_editor_absoluteX="178dp"
                     tools:srcCompat="@drawable/AjustesCerrarSesion" />
 
@@ -272,13 +293,13 @@
 
                 <ImageView
                     android:id="@+id/politica_privacidad"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    android:layout_marginStart="10dp"
                     tools:srcCompat="@drawable/AjustesDocumento" />
 
                 <Button
@@ -301,6 +322,7 @@
                 android:textColor="@color/azulito"
                 android:layout_marginBottom="10dp"
                 android:text="Seguridad"
+                android:textSize="20dp"
                 android:textAlignment="center"
                 tools:layout_editor_absoluteX="15dp"
                 tools:layout_editor_absoluteY="141dp" />
@@ -313,13 +335,13 @@
 
                 <ImageView
                     android:id="@+id/estado_seguridad"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    android:layout_marginStart="10dp"
                     tools:srcCompat="@drawable/AjustesCandado" />
 
                 <Button
@@ -342,10 +364,10 @@
 
                 <ImageView
                     android:id="@+id/contraseñas"
-                    android:layout_width="60dp"
+                    android:layout_width="45dp"
                     android:layout_height="60dp"
-                    android:layout_marginEnd="16dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
