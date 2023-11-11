@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="textoGeneral">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+
+</resources>
