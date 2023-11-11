@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="texto">#DDC1E2</color>
     <color name="white">#FFFFFFFF</color>
     <color name="amarillito">#FF9436</color>
     <color name="transparente">#00FFFFFF</color>
-    <color name="background">#D2CDE6</color>
+    <color name="background">#242d3a</color>
 </resources>
