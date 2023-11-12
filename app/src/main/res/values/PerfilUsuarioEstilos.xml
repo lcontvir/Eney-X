@@ -14,4 +14,7 @@
         <item name="android:background">@color/amarillito</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+
+
 </resources>
