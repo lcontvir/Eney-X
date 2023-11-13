@@ -19,6 +19,9 @@
             android:name=".activity_perfilUsuario"
             android:exported="false" />
         <activity
+            android:name=".activity_componente_main"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
