@@ -71,8 +71,8 @@
         android:layout_marginTop="72dp"
         android:layout_marginEnd="16dp"
         android:text="Licencias"
-        android:textSize="18dp"
         android:textColor="#3A3737"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/dispositivo" />
@@ -85,8 +85,8 @@
         android:layout_marginStart="196dp"
         android:layout_marginTop="16dp"
         android:text="Privacidad"
-        android:textSize="18dp"
         android:textColor="#3A3737"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/button7"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
@@ -99,8 +99,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="27dp"
         android:text="Facturacion"
-        android:textSize="18dp"
         android:textColor="#3A3737"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -113,52 +113,64 @@
         android:layout_marginStart="14dp"
         android:layout_marginTop="18dp"
         android:text="Dispositivos"
-        android:textSize="18dp"
         android:textColor="#3A3737"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button8" />
+
 
     <ImageButton
         android:id="@+id/botonCasita"
         android:layout_width="85dp"
         android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="302dp"
+        android:adjustViewBounds="true"
         android:background="@android:color/transparent"
         android:contentDescription="Botón de casita"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:tint="@color/white"
-        tools:src="@drawable/PerfilUsuarioCasa" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator"
+        app:layout_constraintVertical_bias="0.0"
+        tools:src="@drawable/casa" />
 
     <ImageButton
         android:id="@+id/botonCasita7"
         android:layout_width="85dp"
         android:layout_height="70dp"
         android:layout_marginStart="163dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="163dp"
-        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
         android:background="@android:color/transparent"
         android:contentDescription="Botón de casita"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:tint="@color/white"
-        tools:src="@drawable/PerfilUsuarioEscudo" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator"
+        app:layout_constraintVertical_bias="0.0"
+        tools:src="@drawable/escudo" />
 
     <ImageButton
         android:id="@+id/botonCasita8"
         android:layout_width="85dp"
         android:layout_height="70dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="309dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="17dp"
+        android:adjustViewBounds="true"
         android:background="@android:color/transparent"
         android:contentDescription="Botón de casita"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/white"
-        tools:src="@drawable/PerfilUsuarioAjustes" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator"
+        tools:src="@drawable/ajustes" />
 
     <Button
         android:id="@+id/button11"
@@ -169,9 +181,9 @@
         android:layout_marginEnd="19dp"
         android:layout_marginBottom="14dp"
         android:background="#71DF4A"
-        android:textSize="18dp"
         android:text="Nosotros"
         android:textColor="#3A3737"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageViewSeparator"
         app:layout_constraintEnd_toEndOf="parent"
@@ -181,7 +193,7 @@
         android:id="@+id/imageViewSeparator"
         android:layout_width="450dp"
         android:layout_height="5dp"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="96dp"
         android:background="@color/white"
         android:scaleType="fitXY"
         android:src="@android:drawable/divider_horizontal_bright"
