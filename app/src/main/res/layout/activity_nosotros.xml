@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity_nosotros">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="231dp"
+        android:layout_height="230dp"
+        android:alpha="0.3"
+        tools:layout_editor_absoluteX="245dp"
+        tools:layout_editor_absoluteY="-66dp"
+        tools:srcCompat="@drawable/logoeneyx" />
+
+    <TextView
+        android:id="@+id/titulo"
+        style="@style/Titulo"
+        android:layout_width="381dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/boton_bordes_blancos"
+        android:includeFontPadding="true"
+        android:padding="14dp"
+        android:paddingRight="20dp"
+        android:text="Nosotros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingStart="19dp"
+        android:paddingEnd="19dp"
+        android:text="@string/quienesSomos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
