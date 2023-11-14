@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/color_gradual">
+    tools:context=".activity_inicio"
+    android:background="@color/background">
 
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/logoeney"
         android:layout_width="395dp"
         android:layout_height="287dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
+        app:srcCompat="@drawable/logoeneyx"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
