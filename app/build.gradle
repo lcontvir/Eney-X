@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'es.eney_x.eney_x'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "es.eney_x.eney_x"
