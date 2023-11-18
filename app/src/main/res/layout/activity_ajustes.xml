@@ -8,8 +8,8 @@
     tools:context=".activity_Ajustes">
 
 
-    <ImageView
-        android:id="@+id/vueltaAtras"
+    <ImageButton
+        android:id="@+id/VueltaAtras"
         android:layout_width="62dp"
         android:layout_height="50dp"
         android:layout_marginStart="56dp"
@@ -18,9 +18,10 @@
         android:contentDescription="volver atrás"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/flecharellenaRedimensionada" />
+        tools:src="@drawable/flechaazulblancarellenaizquierda"
+        android:scaleType="fitCenter"/>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/Ajustes"
         android:layout_width="332dp"
         android:layout_height="72dp"
@@ -45,23 +46,23 @@
         app:layout_constraintTop_toTopOf="@+id/Ajustes" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/Logo_eney"
         android:layout_width="283dp"
         android:layout_height="217dp"
         android:layout_marginStart="194dp"
         android:layout_marginBottom="20dp"
         android:alpha="0.2"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/ScrollView"
         app:layout_constraintStart_toStartOf="@+id/Ajustes"
         tools:srcCompat="@drawable/logoeneyx" />
 
     <ImageView
-        android:id="@+id/iphone"
+        android:id="@+id/Iphone"
         android:layout_width="37dp"
         android:layout_height="38dp"
         android:layout_marginStart="12dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/ScrollView"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@drawable/iphoneicon" />
 
@@ -74,11 +75,11 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/iphone"
+        app:layout_constraintStart_toEndOf="@+id/Iphone"
         app:layout_constraintTop_toBottomOf="@+id/Ajustes" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/ScrollView"
         android:layout_width="388dp"
         android:layout_height="551dp"
         android:layout_margin="10dp"
@@ -131,7 +132,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/modo_nocturno"
+                    android:id="@+id/Modo_nocturno"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="15dp"
@@ -142,7 +143,7 @@
                     tools:srcCompat="@drawable/AjustesNoche" />
 
                 <Button
-                    android:id="@+id/modo_nocturno_boton"
+                    android:id="@+id/Modo_nocturno_boton"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -163,7 +164,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/sonido"
+                    android:id="@+id/Sonido"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="10dp"
@@ -175,7 +176,7 @@
                     tools:srcCompat="@drawable/AjustesSonido" />
 
                 <Button
-                    android:id="@+id/sonido_boton"
+                    android:id="@+id/Sonido_boton"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -196,7 +197,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/brillo_pantalla"
+                    android:id="@+id/Brillo_pantalla"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="10dp"
@@ -208,7 +209,7 @@
                     tools:srcCompat="@drawable/AjustesSol" />
 
                 <Button
-                    android:id="@+id/brillo_pantalla_boton"
+                    android:id="@+id/Brillo_pantalla_boton"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -229,7 +230,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/idioma"
+                    android:id="@+id/Idioma"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="10dp"
@@ -241,7 +242,7 @@
                     tools:srcCompat="@drawable/AjustesIdioma" />
 
                 <Button
-                    android:id="@+id/idioma_boton"
+                    android:id="@+id/Idioma_boton"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -262,7 +263,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/notificaciones"
+                    android:id="@+id/Notificaciones"
                     android:layout_width="45dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
@@ -274,7 +275,7 @@
                     tools:srcCompat="@drawable/AjustesNotificacion" />
 
                 <Button
-                    android:id="@+id/notificaciones_boton"
+                    android:id="@+id/Notificaciones_boton"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -326,7 +327,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/cerrar_sesion"
+                            android:id="@+id/Cerrar_sesion"
                             android:layout_width="45dp"
                             android:layout_height="60dp"
                             android:layout_marginStart="10dp"
@@ -338,7 +339,7 @@
                             tools:srcCompat="@drawable/AjustesCerrarSesion" />
 
                     <Button
-                        android:id="@+id/cerrar_sesion_boton"
+                        android:id="@+id/Cerrar_sesion_boton"
                         style="@style/EstiloBotonRectangularAzul"
                         android:layout_width="240dp"
                         android:layout_height="wrap_content"
@@ -359,7 +360,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/politica_privacidad"
+                    android:id="@+id/Politica_privacidad"
                     android:layout_width="45dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="10dp"
@@ -371,7 +372,7 @@
                     tools:srcCompat="@drawable/AjustesDocumento" />
 
                 <Button
-                    android:id="@+id/politica_privacidad_boton"
+                    android:id="@+id/Politica_privacidad_boton"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
