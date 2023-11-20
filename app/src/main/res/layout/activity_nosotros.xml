@@ -101,37 +101,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />--------------------------------------
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/casa"
         android:layout_width="67dp"
         android:layout_height="64dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="34dp"
+        android:layout_marginTop="663dp"
+        android:layout_marginEnd="320dp"
         android:background="@android:color/transparent"
         android:contentDescription="Botón de casita"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewSeparator3"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator"
+        app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/casa" />
 
     <ImageButton
         android:id="@+id/escudo"
         android:layout_width="75dp"
         android:layout_height="64dp"
-        android:layout_marginStart="37dp"
+        android:layout_marginStart="163dp"
         android:layout_marginTop="665dp"
-        android:layout_marginEnd="38dp"
+        android:layout_marginEnd="173dp"
         android:background="@android:color/transparent"
         android:contentDescription="Botón de casita"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewSeparator4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageViewSeparator3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/escudo" />
 
@@ -139,16 +137,15 @@
         android:id="@+id/ajustes"
         android:layout_width="68dp"
         android:layout_height="58dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginStart="314dp"
+        android:layout_marginTop="664dp"
+        android:layout_marginEnd="29dp"
         android:background="@android:color/transparent"
         android:contentDescription="Botón de casita"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageViewSeparator4"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ajustes" />
 
     <LinearLayout
