@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252627"
+    android:backgroundTint="@color/colorFondo"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/botonCheck"
+        android:layout_width="340dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/botonVerde"
+        android:text="@string/textoBotonVerde"
+        android:textColor="@color/Blanco"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="543dp" />
+
+    <ImageButton
+        android:id="@+id/botonCasa"
+        android:layout_width="85dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Boton casa"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/casa" />
+
+    <ImageButton
+        android:id="@+id/botonEscudo"
+        android:layout_width="85dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Boton Escudo"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/escudo" />
+
+    <ImageButton
+        android:id="@+id/botonAjustes"
+        android:layout_width="85dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Boton Ajustes"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/Blanco"
+        tools:src="@drawable/ajustes" />
+
+    <ImageView
+        android:id="@+id/SeparadorHorizontal"
+        android:layout_width="450dp"
+        android:layout_height="5dp"
+        android:layout_marginBottom="97dp"
+        android:background="@color/Blanco"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_bright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/SeparadorVertical1"
+        android:layout_width="5dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/Blanco"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_bright"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SeparadorHorizontal" />
+
+    <ImageView
+        android:id="@+id/SeparadorVertical2"
+        android:layout_width="5dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="130dp"
+        android:background="@color/Blanco"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_bright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SeparadorHorizontal" />
+
+    <ImageView
+        android:id="@+id/ImagenCheck"
+        android:layout_width="178dp"
+        android:layout_height="201dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="457dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/escudo" />
+
+    <TextView
+        android:id="@+id/textoCheckIn"
+        android:layout_width="296dp"
+        android:layout_height="50dp"
+        android:text="@string/textoCheckIn"
+        android:textColor="@color/Blanco"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="294dp" />
+
+    <TextView
+        android:id="@+id/textoCheckInColor"
+        android:layout_width="106dp"
+        android:layout_height="42dp"
+        android:text="@string/textoCheckInColor"
+        android:textColor="@color/botonVerde"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="344dp" />
+
+    <TextView
+        android:id="@+id/textoFuncion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/VPN"
+        android:textColor="@color/Blanco"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <TextView
+        android:id="@+id/textoFuncion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Contraseñas"
+        android:textColor="@color/Blanco"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="460dp" />
+
+    <TextView
+        android:id="@+id/textoFuncion3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ProtectorWeb"
+        android:textColor="@color/Blanco"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="488dp" />
+
+    <TextView
+        android:id="@+id/textoFuncion4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Antipublicidad"
+        android:textColor="@color/Blanco"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="430dp" />
+
+    <TextView
+        android:id="@+id/textoFuncion5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ControlParental"
+        android:textColor="@color/Blanco"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+    <TextView
+        android:id="@+id/textoFuncion6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Krilia"
+        android:textColor="@color/Blanco"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="486dp" />
+
+    <ImageView
+        android:id="@+id/CirculoVerde1"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        app:srcCompat="@drawable/circuloverde"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+    <ImageView
+        android:id="@+id/CirculoVerde2"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        app:srcCompat="@drawable/circuloverde"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="462dp" />
+
+    <ImageView
+        android:id="@+id/CirculoVerde3"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        app:srcCompat="@drawable/circuloverde"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="490dp" />
+
+    <ImageView
+        android:id="@+id/CirculoVerde4"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        app:srcCompat="@drawable/circuloverde"
+        tools:layout_editor_absoluteX="350dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <ImageView
+        android:id="@+id/CirculoVerde5"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        app:srcCompat="@drawable/circuloverde"
+        tools:layout_editor_absoluteX="356dp"
+        tools:layout_editor_absoluteY="460dp" />
+
+    <ImageView
+        android:id="@+id/CirculoNaranja1"
+        android:layout_width="12dp"
+        android:layout_height="16dp"
+        app:srcCompat="@drawable/circulonaranja"
+        tools:layout_editor_absoluteX="285dp"
+        tools:layout_editor_absoluteY="488dp" />
+
+    <ImageView
+        android:id="@+id/LogoFondo"
+        android:layout_width="314dp"
+        android:layout_height="372dp"
+        android:alpha="0.2"
+        app:srcCompat="@drawable/logoeneyx"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="-132dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
