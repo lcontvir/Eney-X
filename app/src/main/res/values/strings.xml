@@ -4,7 +4,10 @@
     <string name="btn_text_shield">Escudo</string>
     <string name="btn_text_settings">Ajustes</string>
     <string name="all_components">All Components</string>
-    <string name="vpn">VPN</string>
     <string name="passw">PASS W</string>
     <string name="components">Mis componentes</string>
+    <string name="vpn">Virtual Private Network</string>
+    <string name="vpnpequeño">VPN</string>
+
+
 </resources>
