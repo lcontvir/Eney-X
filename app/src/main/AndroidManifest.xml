@@ -17,10 +17,7 @@
             android:exported="false" />
         <activity
             android:name=".activity_perfilUsuario"
-            android:exported="false" />
-        <activity
-            android:name=".activity_nosotros"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
