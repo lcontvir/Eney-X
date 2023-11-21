@@ -140,7 +140,7 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
-                    tools:srcCompat="@drawable/AjustesNoche" />
+                    tools:srcCompat="@drawable/ajustesNoche" />
 
                 <Button
                     android:id="@+id/Modo_nocturno_boton"
@@ -173,7 +173,7 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/AjustesSonido" />
+                    tools:srcCompat="@drawable/ajustesSonido" />
 
                 <Button
                     android:id="@+id/Sonido_boton"
@@ -206,7 +206,7 @@
                     android:layout_marginTop="15dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/AjustesSol" />
+                    tools:srcCompat="@drawable/ajustesSol" />
 
                 <Button
                     android:id="@+id/Brillo_pantalla_boton"
@@ -239,7 +239,7 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/AjustesIdioma" />
+                    tools:srcCompat="@drawable/ajustesIdioma" />
 
                 <Button
                     android:id="@+id/Idioma_boton"
@@ -272,7 +272,7 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/AjustesNotificacion" />
+                    tools:srcCompat="@drawable/ajustesNotificacion" />
 
                 <Button
                     android:id="@+id/Notificaciones_boton"
@@ -336,7 +336,7 @@
                             android:layout_marginBottom="16dp"
                             app:tint="@color/white"
                             tools:layout_editor_absoluteX="178dp"
-                            tools:srcCompat="@drawable/AjustesCerrarSesion" />
+                            tools:srcCompat="@drawable/ajustesCerrarSesion" />
 
                     <Button
                         android:id="@+id/Cerrar_sesion_boton"
@@ -369,7 +369,7 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/AjustesDocumento" />
+                    tools:srcCompat="@drawable/ajustesDocumento" />
 
                 <Button
                     android:id="@+id/Politica_privacidad_boton"
@@ -379,7 +379,7 @@
                     android:layout_marginTop="15dp"
                     android:text="Politica de privacidad"
                     android:textSize="18dp"
-                    style="@style/EstiloBotonRectangularAzul"
+                    style="@style/EstiloBotonRectangularAzul"s
                     tools:layout_editor_absoluteX="86dp"
                     tools:layout_editor_absoluteY="47dp" />
 
