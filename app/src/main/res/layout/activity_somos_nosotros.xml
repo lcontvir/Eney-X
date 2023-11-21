@@ -8,7 +8,7 @@
     tools:context=".activity_SomosNosotros">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/IvLogoEney"
         android:layout_width="231dp"
         android:layout_height="230dp"
         android:alpha="0.3"
@@ -18,17 +18,16 @@
         tools:srcCompat="@drawable/logoeneyx" />
 
     <TextView
-        android:id="@+id/titulo"
+        android:id="@+id/TvNosotros"
         style="@style/Titulo"
         android:layout_width="381dp"
         android:layout_height="73dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/boton_bordes_blancos"
         android:includeFontPadding="true"
-        android:padding="14dp"
-        android:paddingRight="20dp"
+        android:gravity="center"
+        android:paddingRight="30dp"
         android:text="Nosotros"
-        android:textAlignment="viewEnd"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +36,7 @@
 
 
     <ImageView
-        android:id="@+id/imageViewSeparator"
+        android:id="@+id/IvSeparadorTop"
         android:layout_width="450dp"
         android:layout_height="5dp"
         android:background="@color/white"
@@ -50,7 +49,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageViewSeparator4"
+        android:id="@+id/IvSeparadorDerech"
         android:layout_width="6dp"
         android:layout_height="80dp"
         android:layout_marginStart="280dp"
@@ -65,7 +64,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewSeparator3"
+        android:id="@+id/IvSeparadorIzq"
         android:layout_width="6dp"
         android:layout_height="80dp"
         android:layout_marginStart="120dp"
@@ -80,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/casa"
+        android:id="@+id/IbCasa"
         android:layout_width="67dp"
         android:layout_height="64dp"
         android:layout_marginStart="24dp"
@@ -95,7 +94,7 @@
         tools:src="@drawable/casa" />
 
     <ImageButton
-        android:id="@+id/escudo"
+        android:id="@+id/IbEscudo"
         android:layout_width="75dp"
         android:layout_height="64dp"
         android:layout_marginStart="163dp"
@@ -110,7 +109,7 @@
         tools:src="@drawable/escudo" />
 
     <ImageButton
-        android:id="@+id/ajustes"
+        android:id="@+id/IbAjustes"
         android:layout_width="68dp"
         android:layout_height="58dp"
         android:layout_marginStart="314dp"
@@ -136,7 +135,7 @@
         >
 
         <ImageView
-            android:id="@+id/facebook"
+            android:id="@+id/IvFacebook"
             android:layout_width="10dp"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -144,7 +143,7 @@
             app:srcCompat="@drawable/logofacebook" />
 
         <ImageView
-            android:id="@+id/x"
+            android:id="@+id/IvX"
             android:layout_width="10dp"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -152,7 +151,7 @@
             app:srcCompat="@drawable/twitter" />
 
         <ImageView
-            android:id="@+id/instagram"
+            android:id="@+id/IvInstagram"
             android:layout_width="10dp"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -161,15 +160,15 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/flechaVolver"
+        android:id="@+id/IbVolver"
         android:layout_width="71dp"
         android:layout_height="53dp"
         android:layout_marginTop="44dp"
         android:background="@color/transparente"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="@+id/titulo"
+        app:layout_constraintEnd_toEndOf="@+id/TvNosotros"
         app:layout_constraintHorizontal_bias="0.029"
-        app:layout_constraintStart_toStartOf="@+id/titulo"
+        app:layout_constraintStart_toStartOf="@+id/TvNosotros"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/flechamoradablancarellenaizquierda" />
 
@@ -205,22 +204,29 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/titulo" />
+                app:layout_constraintTop_toBottomOf="@+id/TvNosotros" />
 
-            <ImageView
-                android:id="@+id/imagenNosotros"
+            <FrameLayout
                 android:layout_width="324dp"
                 android:layout_height="202dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="28dp"
                 android:background="@drawable/boton_bordes_blancos"
+                android:padding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/subtitulo"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/nosotros" />
+                app:layout_constraintVertical_bias="0.0">
+
+                <ImageView
+                    android:id="@+id/IvMapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nosotros" />
+        </FrameLayout>
         </LinearLayout>
 
 
