@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity_login"
+    tools:layout_editor_absoluteX="-18dp"
+    tools:layout_editor_absoluteY="0dp">
+
+
+    <TextView
+        android:id="@+id/TvTextoTitulo"
+        style="@style/LoginMainTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="Iniciar Sesion"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/IVLogoEneyX"
+        android:layout_width="231dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginBottom="624dp"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@drawable/logoeneyx" />
+
+    <EditText
+        android:id="@+id/EtMail"
+        style="@style/LoginEditTextTheme"
+        android:layout_width="341dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="50dp"
+        android:inputType="text|textEmailAddress|textAutoComplete"
+        android:text='Correo Electronico'
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EtPassw"
+        style="@style/LoginEditTextTheme"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="284dp"
+        android:layout_marginEnd="51dp"
+        android:inputType="text|textPassword"
+        android:text="********"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonRegister"
+        android:layout_width="358dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="26dp"
+        android:backgroundTint="#391491"
+        android:text="Iniciar Sesion"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EtPassw" />
+
+    <ImageButton
+        android:id="@+id/GoogleButton"
+        style="@style/LoginButtonWhite"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/boton_bordes_blancos"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logogoogle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+
+    <ImageButton
+        android:id="@+id/FacebookButton"
+        style="@style/LoginButtonWhite"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/boton_bordes_blancos"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logofacebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/GoogleButton"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+
+    <TextView
+        android:id="@+id/TvIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="97dp"
+        android:text="Registrarme"
+        android:textColor="#3354F8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toEndOf="@+id/TvTienesCuenta"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+
+    <TextView
+        android:id="@+id/TvTienesCuenta"
+        style="@style/LoginEditTextTheme"
+        android:layout_width="118dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="224dp"
+        android:text="No tienes cuenta?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+
+    <TextView
+        android:id="@+id/TvO"
+        style="@style/LoginEditTextTheme"
+        android:layout_width="36dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="13dp"
+        android:text="O"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/VBarraDerech"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@+id/VBarraIzq"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+
+    <View
+        android:id="@+id/VBarraIzq"
+        android:layout_width="123dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/barra_redondeada"
+        app:layout_constraintBottom_toTopOf="@+id/GoogleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister"
+        app:layout_constraintVertical_bias="0.592" />
+
+    <View
+        android:id="@+id/VBarraDerech"
+        android:layout_width="123dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/barra_redondeada"
+        app:layout_constraintBottom_toTopOf="@+id/FacebookButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <TextView
+        android:id="@+id/TvPongamonos"
+        style="@style/LoginMainTheme"
+        android:layout_width="149dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="230dp"
+        android:text="Bienvenido de vuelta!"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
