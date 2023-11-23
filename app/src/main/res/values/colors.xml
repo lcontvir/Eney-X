@@ -6,4 +6,6 @@
     <color name="transparente">#00FFFFFF</color>
     <color name="background">#242d3a</color>
     <color name="botonMorado">#300676</color>
+    <color name="azulito">#310672</color>
+    <color name="background">#1f2326</color>
 </resources>
