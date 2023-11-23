@@ -16,15 +16,12 @@
             android:name=".activity_inicio_eney"
             android:exported="false" />
         <activity
-            android:name=".inicio_eney"
-            android:exported="false" />
-        <activity
             android:name=".activity_perfilUsuario"
             android:exported="false" />
         <activity
-            android:name=".activity_inicio"
-            android:exported="true">
-            <intent-filter>
+            android:name=".MainActivity"
+            android:exported="true" >
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

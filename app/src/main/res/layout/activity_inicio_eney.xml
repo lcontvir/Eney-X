@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_inicio_eney"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".activity_inicio_eney">
+
     <ImageView
         android:id="@+id/logoeney"
         android:layout_width="395dp"
         android:layout_height="287dp"
-        android:layout_marginEnd="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
