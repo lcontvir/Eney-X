@@ -16,6 +16,15 @@
             android:name=".activity_CheckIn"
             android:exported="false" />
         <activity
+            android:name=".activity_inicio_eney"
+            android:exported="false" />
+        <activity
+            android:name=".activity_Ajustes"
+            android:exported="false" />
+        <activity
+            android:name=".activity_SomosNosotros"
+            android:exported="false" />
+        <activity
             android:name=".activity_login"
             android:exported="false" />
         <activity
@@ -26,8 +35,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
+            android:exported="true" >
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
