@@ -1,5 +1,23 @@
 <resources>
+
     <string name="app_name">Eney-X</string>
+    <string name="btn_text_profile">Perfil</string>
+    <string name="btn_text_shield">Escudo</string>
+    <string name="btn_text_settings">Ajustes</string>
+    <string name="all_components">All Components</string>
+    <string name="vpn">VPN</string>
+    <string name="passw">PASS W</string>
+    <string name="components">All components</string>
+    <string name="textoCheckIn">Su protección esta</string>
+    <string name="textoCheckInColor">Activa</string>
+    <string name="VPN">- VPN</string>
+    <string name="Contraseñas">- Contraseñas</string>
+    <string name="ProtectorWeb">- Protector Web</string>
+    <string name="Antipublicidad">- Anti Publicidad</string>
+    <string name="ControlParental">- Control Parental</string>
+    <string name="Krilia">- Krilia</string>
+    <string name="textoBotonVerde">No hay problemas que atender</string>
+
     <string name="nosotros">Nosotros</string>
     <string name="quienesSomos">
         Nos dedicamos a proteger a individuos y empresas con soluciones avanzadas que van más allá de lo convencional.
