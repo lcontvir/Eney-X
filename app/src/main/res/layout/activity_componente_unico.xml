@@ -11,13 +11,14 @@
         android:id="@+id/unico_vpn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:background="@drawable/boton_bordes_blancos"
         android:padding="5dp"
         android:text="         VPN     "
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintBottom_toTopOf="@+id/layout_componente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,25 +28,25 @@
         android:id="@+id/logo"
         android:layout_width="231dp"
         android:layout_height="230dp"
-        android:layout_marginStart="236dp"
-        android:layout_marginBottom="652dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginBottom="628dp"
         android:alpha="0.3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@drawable/logoeneyx" />
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="367dp"
-        android:layout_height="574dp"
+        android:id="@+id/layout_componente"
+        android:layout_width="361dp"
+        android:layout_height="544dp"
         android:layout_margin="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9">
+        app:layout_constraintVertical_bias="0.938">
 
         <LinearLayout
             android:layout_width="match_parent"
