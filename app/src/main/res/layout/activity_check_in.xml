@@ -21,7 +21,7 @@
         android:textColor="@color/Blanco"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/SeparadorHorizontal"
+        app:layout_constraintBottom_toTopOf="@+id/separadorHorizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,9 +38,9 @@
         android:contentDescription="Boton casa"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/SeparadorVertical1"
+        app:layout_constraintEnd_toStartOf="@+id/separadorVertical1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SeparadorHorizontal"
+        app:layout_constraintTop_toBottomOf="@+id/separadorHorizontal"
         tools:src="@drawable/casa" />
 
     <ImageButton
@@ -55,9 +55,9 @@
         android:contentDescription="Boton Escudo"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/SeparadorVertical2"
-        app:layout_constraintStart_toStartOf="@+id/SeparadorVertical1"
-        app:layout_constraintTop_toBottomOf="@+id/SeparadorHorizontal"
+        app:layout_constraintEnd_toEndOf="@+id/separadorVertical2"
+        app:layout_constraintStart_toStartOf="@+id/separadorVertical1"
+        app:layout_constraintTop_toBottomOf="@+id/separadorHorizontal"
         tools:src="@drawable/escudo" />
 
     <ImageButton
@@ -73,12 +73,13 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/SeparadorVertical2"
-        app:layout_constraintTop_toBottomOf="@+id/SeparadorHorizontal"
+        app:layout_constraintStart_toStartOf="@+id/separadorVertical2"
+        app:layout_constraintTop_toBottomOf="@+id/separadorHorizontal"
+        app:tint="@color/Blanco"
         tools:src="@drawable/ajustes" />
 
     <ImageView
-        android:id="@+id/SeparadorHorizontal"
+        android:id="@+id/separadorHorizontal"
         android:layout_width="450dp"
         android:layout_height="5dp"
         android:layout_marginBottom="97dp"
@@ -89,7 +90,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/SeparadorVertical1"
+        android:id="@+id/separadorVertical1"
         android:layout_width="5dp"
         android:layout_height="110dp"
         android:layout_marginStart="128dp"
@@ -98,10 +99,10 @@
         android:scaleType="fitXY"
         android:src="@android:drawable/divider_horizontal_bright"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/SeparadorHorizontal" />
+        app:layout_constraintTop_toTopOf="@+id/separadorHorizontal" />
 
     <ImageView
-        android:id="@+id/SeparadorVertical2"
+        android:id="@+id/separadorVertical2"
         android:layout_width="5dp"
         android:layout_height="110dp"
         android:layout_marginTop="3dp"
@@ -110,10 +111,10 @@
         android:scaleType="fitXY"
         android:src="@android:drawable/divider_horizontal_bright"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/SeparadorHorizontal" />
+        app:layout_constraintTop_toTopOf="@+id/separadorHorizontal" />
 
     <ImageView
-        android:id="@+id/ImagenCheck"
+        android:id="@+id/imagenCheck"
         android:layout_width="178dp"
         android:layout_height="201dp"
         android:layout_marginStart="117dp"
@@ -137,7 +138,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textoCheckInColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImagenCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/imagenCheck" />
 
     <TextView
         android:id="@+id/textoCheckInColor"
@@ -156,7 +157,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textoFuncion1"
+        android:id="@+id/textoVPN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
@@ -172,7 +173,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textoFuncion2"
+        android:id="@+id/textoContrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
@@ -188,7 +189,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textoFuncion3"
+        android:id="@+id/textoProtectorWeb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
@@ -204,7 +205,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textoFuncion4"
+        android:id="@+id/textoAntiPublicidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="239dp"
@@ -220,7 +221,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textoFuncion5"
+        android:id="@+id/textoControlParental"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="239dp"
@@ -236,7 +237,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textoFuncion6"
+        android:id="@+id/textoKrilia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="238dp"
@@ -252,7 +253,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/CirculoVerde1"
+        android:id="@+id/circuloVerde1"
         android:layout_width="12dp"
         android:layout_height="16dp"
         android:layout_marginStart="82dp"
@@ -266,7 +267,7 @@
         app:srcCompat="@drawable/circuloverde" />
 
     <ImageView
-        android:id="@+id/CirculoVerde2"
+        android:id="@+id/circuloVerde2"
         android:layout_width="12dp"
         android:layout_height="16dp"
         android:layout_marginStart="139dp"
@@ -280,7 +281,7 @@
         app:srcCompat="@drawable/circuloverde" />
 
     <ImageView
-        android:id="@+id/CirculoVerde3"
+        android:id="@+id/circuloVerde3"
         android:layout_width="12dp"
         android:layout_height="16dp"
         android:layout_marginStart="150dp"
@@ -294,7 +295,7 @@
         app:srcCompat="@drawable/circuloverde" />
 
     <ImageView
-        android:id="@+id/CirculoVerde4"
+        android:id="@+id/circuloVerde4"
         android:layout_width="12dp"
         android:layout_height="16dp"
         android:layout_marginStart="349dp"
@@ -308,7 +309,7 @@
         app:srcCompat="@drawable/circuloverde" />
 
     <ImageView
-        android:id="@+id/CirculoVerde5"
+        android:id="@+id/circuloVerde5"
         android:layout_width="12dp"
         android:layout_height="16dp"
         android:layout_marginStart="356dp"
@@ -322,7 +323,7 @@
         app:srcCompat="@drawable/circuloverde" />
 
     <ImageView
-        android:id="@+id/CirculoNaranja1"
+        android:id="@+id/circuloNaranja1"
         android:layout_width="12dp"
         android:layout_height="16dp"
         android:layout_marginStart="285dp"
@@ -336,7 +337,7 @@
         app:srcCompat="@drawable/circulonaranja" />
 
     <ImageView
-        android:id="@+id/LogoFondo"
+        android:id="@+id/logoFondo"
         android:layout_width="314dp"
         android:layout_height="372dp"
         android:layout_marginStart="206dp"
