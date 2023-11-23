@@ -379,7 +379,7 @@
                     android:layout_marginTop="15dp"
                     android:text="Politica de privacidad"
                     android:textSize="18dp"
-                    style="@style/EstiloBotonRectangularAzul"s
+                    style="@style/EstiloBotonRectangularAzul"
                     tools:layout_editor_absoluteX="86dp"
                     tools:layout_editor_absoluteY="47dp" />
 
