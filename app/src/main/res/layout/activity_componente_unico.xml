@@ -8,7 +8,7 @@
     tools:context=".activity_componente_unico">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/unico_vpn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/boton_bordes_blancos"
@@ -200,7 +200,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/flecha_atras"
         android:layout_width="83dp"
         android:layout_height="71dp"
         android:layout_marginTop="4dp"
@@ -209,7 +209,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/unico_vpn"
         app:srcCompat="@drawable/flechamoradablancarellenaizquierda" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
