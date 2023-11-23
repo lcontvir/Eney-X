@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RegisterMainTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="RegisterEditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:backgroundTint">#FFFFFF</item>
+    </style>
+
+    <style name="RegisterButtonWhite" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:backgroundTint">#FFFFFF</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="shapeAppearance">@id/rectangles</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>
