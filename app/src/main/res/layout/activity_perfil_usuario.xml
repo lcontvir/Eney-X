@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".MainActivity"
+    tools:context=".activity_perfilUsuario"
 
 
     >
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/PerfilUsuario"
         android:layout_width="174dp"
         android:layout_height="173dp"
         android:layout_marginStart="24dp"
@@ -32,23 +32,23 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/PerfilUsuario"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/LogoEney"
         android:layout_width="231dp"
         android:layout_height="230dp"
         android:layout_marginStart="56dp"
         android:layout_marginBottom="4dp"
         android:alpha="0.3"
-        app:layout_constraintBottom_toTopOf="@+id/dispositivo"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/Dispositivo"
+        app:layout_constraintStart_toEndOf="@+id/PerfilUsuario"
         tools:srcCompat="@drawable/logoeneyx" />
 
     <TextView
-        android:id="@+id/dispositivo"
+        android:id="@+id/Dispositivo"
         android:layout_width="185dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
@@ -57,7 +57,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/PerfilUsuario"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/botonCasita"
+        android:id="@+id/BotonCasita"
         android:layout_width="67dp"
         android:layout_height="64dp"
         android:layout_marginStart="24dp"
@@ -87,11 +87,11 @@
         app:layout_constraintEnd_toStartOf="@+id/imageViewSeparator3"
         app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator"
+        app:layout_constraintTop_toBottomOf="@+id/ImagenHorizontal"
         tools:src="@drawable/casa" />
 
     <ImageButton
-        android:id="@+id/botonCasita7"
+        android:id="@+id/BotonEscudo"
         android:layout_width="75dp"
         android:layout_height="64dp"
         android:layout_marginStart="37dp"
@@ -107,7 +107,7 @@
         tools:src="@drawable/escudo" />
 
     <ImageButton
-        android:id="@+id/botonCasita8"
+        android:id="@+id/BotonAjustes"
         android:layout_width="68dp"
         android:layout_height="58dp"
         android:layout_marginStart="28dp"
@@ -123,7 +123,7 @@
         tools:src="@drawable/ajustes" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/BotonInformacion"
         style="@style/EstiloBotonRectangular"
         android:layout_width="375dp"
         android:layout_height="69dp"
@@ -139,7 +139,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/BotonLicencias"
         android:layout_width="184dp"
         android:layout_height="141dp"
         android:layout_marginTop="44dp"
@@ -150,10 +150,10 @@
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dispositivo" />
+        app:layout_constraintTop_toBottomOf="@+id/Dispositivo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/BotonPrivacidad"
         android:layout_width="184dp"
         android:layout_height="141dp"
         android:layout_marginTop="16dp"
@@ -164,52 +164,52 @@
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/BotonLicencias" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/ImagenDispositivos"
         android:layout_width="166dp"
         android:layout_height="130dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toTopOf="@+id/button7"
+        app:layout_constraintStart_toStartOf="@+id/BotonDispositivos"
+        app:layout_constraintTop_toTopOf="@+id/BotonDispositivos"
         tools:srcCompat="@drawable/dispositivos" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ImagenLicencias"
         android:layout_width="166dp"
         android:layout_height="116dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button6"
+        app:layout_constraintTop_toTopOf="@+id/BotonLicencias"
         tools:srcCompat="@drawable/k" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/ImagenPrivacidad"
         android:layout_width="162dp"
         android:layout_height="124dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="27dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/BotonPrivacidad"
+        app:layout_constraintTop_toTopOf="@+id/BotonPrivacidad"
         tools:srcCompat="@drawable/candado" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/ImagenFacturacion"
         android:layout_width="162dp"
         android:layout_height="118dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="@+id/button8"
+        app:layout_constraintStart_toStartOf="@+id/BotonFacturacion"
+        app:layout_constraintTop_toTopOf="@+id/BotonFacturacion"
         tools:srcCompat="@drawable/cartera" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/BotonFacturacion"
         android:layout_width="184dp"
         android:layout_height="141dp"
         android:layout_marginStart="16dp"
@@ -220,10 +220,10 @@
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/PerfilUsuario" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/BotonDispositivos"
         android:layout_width="184dp"
         android:layout_height="141dp"
         android:layout_marginStart="14dp"
@@ -234,23 +234,23 @@
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/BotonFacturacion" />
 
     <ImageView
-        android:id="@+id/imageViewSeparator"
+        android:id="@+id/ImagenHorizontal"
         android:layout_width="450dp"
         android:layout_height="5dp"
         android:layout_marginTop="19dp"
         android:background="@color/white"
         android:scaleType="fitXY"
         android:src="@android:drawable/divider_horizontal_bright"
-        app:layout_constraintBottom_toTopOf="@+id/botonCasita7"
+        app:layout_constraintBottom_toTopOf="@+id/BotonEscudo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button11" />
+        app:layout_constraintTop_toBottomOf="@+id/BotonInformacion" />
 
     <ImageView
-        android:id="@+id/imageViewSeparator3"
+        android:id="@+id/ImagenVerticalIzq"
         android:layout_width="6dp"
         android:layout_height="110dp"
         android:layout_marginStart="125dp"
@@ -260,10 +260,10 @@
         android:src="@android:drawable/divider_horizontal_bright"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator" />
+        app:layout_constraintTop_toBottomOf="@+id/ImagenHorizontal" />
 
     <ImageView
-        android:id="@+id/imageViewSeparator4"
+        android:id="@+id/ImagenVerticalDer"
         android:layout_width="7dp"
         android:layout_height="111dp"
         android:layout_marginStart="281dp"
@@ -273,7 +273,7 @@
         android:src="@android:drawable/divider_horizontal_bright"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator" />
+        app:layout_constraintTop_toBottomOf="@+id/ImagenHorizontal" />
 
     <TextView
         android:id="@+id/Opciones"
@@ -285,7 +285,7 @@
         android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/PerfilUsuario" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
