@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="Blanco">#FFFF</color>
+    <color name="colorFondo">#252627</color>
+    <color name="botonVerde">#44C154</color>
     <color name="black">#FF000000</color>
+    <color name="texto">#FFFFFF</color>
     <color name="white">#FFFFFFFF</color>
     <color name="amarillito">#FF9436</color>
-    <color name="background">#252627</color>
+    <color name="transparente">#00FFFFFF</color>
+    <color name="background">#242d3a</color>
     <color name="botonMorado">#300676</color>
-
-
+    <color name="azulito">#310672</color>
+    <color name="botonMorado">#300676</color>
+    <color name="background">#1f2326</color>
 </resources>
