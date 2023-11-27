@@ -21,17 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/IVLogoEneyX"
-        android:layout_width="231dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="257dp"
-        android:layout_marginBottom="570dp"
-        android:alpha="0.3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/logoeneyx" />
-
     <EditText
         android:id="@+id/EtNombreYApellidos"
         style="@style/RegisterEditTextTheme"
@@ -75,7 +64,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/ButtonRegister"
+        android:id="@+id/BttonRegister"
         android:layout_width="358dp"
         android:layout_height="70dp"
         android:layout_marginStart="27dp"
@@ -102,7 +91,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/logogoogle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <ImageButton
         android:id="@+id/FacebookButton"
@@ -119,31 +108,33 @@
         android:src="@drawable/logofacebook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/GoogleButton"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <TextView
         android:id="@+id/TvTienesCuenta"
         style="@style/RegisterEditTextTheme"
         android:layout_width="118dp"
         android:layout_height="20dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="178dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="176dp"
         android:text="Ya tienes cuenta?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
-    <TextView
-        android:id="@+id/TvIniciarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/BttonIniciarSesion"
+        android:layout_width="143dp"
+        android:layout_height="37dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="178dp"
+        android:layout_marginTop="168dp"
         android:layout_marginEnd="97dp"
+        android:background="@color/transparente"
         android:text="Iniciar Sesion"
         android:textColor="#3354F8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toEndOf="@+id/TvTienesCuenta"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <View
         android:id="@+id/VBarraDerech"
@@ -155,7 +146,7 @@
         android:background="@drawable/barra_redondeada"
         app:layout_constraintBottom_toTopOf="@+id/FacebookButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <View
         android:id="@+id/VBarraIzq"
@@ -167,7 +158,7 @@
         android:background="@drawable/barra_redondeada"
         app:layout_constraintBottom_toTopOf="@+id/GoogleButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <TextView
         android:id="@+id/TvO"
@@ -181,7 +172,7 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@+id/VBarraDerech"
         app:layout_constraintStart_toEndOf="@+id/VBarraIzq"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <TextView
         android:id="@+id/TvPongamonos"
@@ -196,6 +187,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_logo_eneyx"
+        android:layout_width="225dp"
+        android:layout_height="182dp"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="533dp"
+        android:alpha=".3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logoeneyx" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
