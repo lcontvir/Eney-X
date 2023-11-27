@@ -24,7 +24,7 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado Android Studio y
 ¡Contribuciones son bienvenidas! Si encuentras un error o tienes una mejora, por favor crea un issue o un pull request.
 
 ## Documentación
-Para obtener información detallada sobre el desarrollo y uso de la aplicación, consulta nuestra [documentación en Notion]([https://www.notion.so/tuempresa/tuproyecto](https://www.notion.so/flyingpuck/Documentaci-n-Interfaces-Eney-x-be5017c3728c41a9afe6d3db24605b87?pvs=4)).
+Para obtener información detallada sobre el desarrollo y uso de la aplicación, consulta nuestra [documentación en Notion]([https://www.notion.so/flyingpuck/Documentaci-n-Interfaces-Eney-x-be5017c3728c41a9afe6d3db24605b87?pvs=4).
 
 ## Licencia
 Este proyecto deberia de tener alguna licencia como minimo, pero no se me ocurre ninguna que poner o si debo
