@@ -16,7 +16,7 @@
             android:name=".activity_inicio_eney"
             android:exported="false" />
         <activity
-            android:name=".activity_SomosNosotros"
+            android:name=".activity_perfilUsuario"
             android:exported="false" />
         <activity
             android:name=".activity_CheckIn"
@@ -34,7 +34,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_perfilUsuario"
+            android:name=".activity_SomosNosotros"
             android:exported="true" >
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
