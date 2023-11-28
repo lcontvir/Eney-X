@@ -23,17 +23,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/IVLogoEneyX"
-        android:layout_width="231dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginBottom="624dp"
-        android:alpha="0.3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/logoeneyx" />
-
     <EditText
         android:id="@+id/EtMail"
         style="@style/LoginEditTextTheme"
@@ -65,7 +54,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/ButtonRegister"
+        android:id="@+id/BttonRegister"
         android:layout_width="358dp"
         android:layout_height="70dp"
         android:layout_marginStart="27dp"
@@ -92,7 +81,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/logogoogle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <ImageButton
         android:id="@+id/FacebookButton"
@@ -110,21 +99,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/GoogleButton"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
-    <TextView
-        android:id="@+id/TvIniciarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/BttonRegistrarme"
+        android:layout_width="130dp"
+        android:layout_height="39dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="212dp"
         android:layout_marginEnd="97dp"
+        android:background="@color/transparente"
         android:text="Registrarme"
         android:textColor="#3354F8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toEndOf="@+id/TvTienesCuenta"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <TextView
         android:id="@+id/TvTienesCuenta"
@@ -135,7 +125,7 @@
         android:layout_marginTop="224dp"
         android:text="No tienes cuenta?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <TextView
         android:id="@+id/TvO"
@@ -150,7 +140,7 @@
         app:layout_constraintEnd_toStartOf="@+id/VBarraDerech"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toEndOf="@+id/VBarraIzq"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
 
     <View
         android:id="@+id/VBarraIzq"
@@ -162,7 +152,7 @@
         android:background="@drawable/barra_redondeada"
         app:layout_constraintBottom_toTopOf="@+id/GoogleButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister"
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister"
         app:layout_constraintVertical_bias="0.592" />
 
     <View
@@ -175,7 +165,7 @@
         android:background="@drawable/barra_redondeada"
         app:layout_constraintBottom_toTopOf="@+id/FacebookButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister"
+        app:layout_constraintTop_toBottomOf="@+id/BttonRegister"
         app:layout_constraintVertical_bias="0.551" />
 
     <TextView
@@ -192,6 +182,17 @@
         app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_logo_eneyx"
+        android:layout_width="218dp"
+        android:layout_height="207dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginBottom="620dp"
+        android:alpha=".3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logoeneyx" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

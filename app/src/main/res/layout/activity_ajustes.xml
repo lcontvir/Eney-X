@@ -19,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/flechaazulblancarellenaizquierda"
+        android:src="@drawable/flechaazulblancarellenaizquierda"
         android:scaleType="fitCenter"/>
 
     <ImageView
@@ -54,6 +55,7 @@
         android:alpha="0.2"
         app:layout_constraintBottom_toTopOf="@+id/ScrollView"
         app:layout_constraintStart_toStartOf="@+id/Ajustes"
+        android:src="@drawable/logoeneyx"
         tools:srcCompat="@drawable/logoeneyx" />
 
     <ImageView
@@ -64,6 +66,7 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/ScrollView"
         app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/iphoneicon"
         tools:srcCompat="@drawable/iphoneicon" />
 
     <TextView
@@ -140,7 +143,8 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
-                    tools:srcCompat="@drawable/ajustesNoche" />
+                    android:src="@drawable/ajustesnoche"
+                    tools:srcCompat="@drawable/ajustesnoche" />
 
                 <Button
                     android:id="@+id/Modo_nocturno_boton"
@@ -156,40 +160,41 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="10dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/Sonido"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="16dp"
-                    app:tint="@color/white"
-                    tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/ajustesSonido" />
-
-                <Button
-                    android:id="@+id/Sonido_boton"
-                    android:layout_width="240dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                   android:layout_marginTop="15dp"
-                    android:text="Sonido"
-                    android:textSize="22dp"
-                    style="@style/EstiloBotonRectangularAzul"
-                    tools:layout_editor_absoluteX="86dp"
-                    tools:layout_editor_absoluteY="47dp" />
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <ImageView
+                        android:id="@+id/Sonido"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/ajustessonido"
+                        app:tint="@color/white"
+                        tools:layout_editor_absoluteX="178dp"
+                        tools:srcCompat="@drawable/ajustessonido" />
 
-            <LinearLayout
+                    <Button
+                        android:id="@+id/Sonido_boton"
+                        style="@style/EstiloBotonRectangularAzul"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Sonido"
+                        android:textSize="22dp"
+                        tools:layout_editor_absoluteX="86dp"
+                        tools:layout_editor_absoluteY="47dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -206,7 +211,8 @@
                     android:layout_marginTop="15dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/ajustesSol" />
+                    android:src="@drawable/ajustessol"
+                    tools:srcCompat="@drawable/ajustessol" />
 
                 <Button
                     android:id="@+id/Brillo_pantalla_boton"
@@ -239,7 +245,8 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/ajustesIdioma" />
+                    android:src="@drawable/ajustesidioma"
+                    tools:srcCompat="@drawable/ajustesidioma" />
 
                 <Button
                     android:id="@+id/Idioma_boton"
@@ -272,7 +279,8 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/ajustesNotificacion" />
+                    android:src="@drawable/ajustesnotificacion"
+                    tools:srcCompat="@drawable/ajustesnotificacion" />
 
                 <Button
                     android:id="@+id/Notificaciones_boton"
@@ -336,7 +344,8 @@
                             android:layout_marginBottom="16dp"
                             app:tint="@color/white"
                             tools:layout_editor_absoluteX="178dp"
-                            tools:srcCompat="@drawable/ajustesCerrarSesion" />
+                            android:src="@drawable/ajustescerrarsesion"
+                            tools:srcCompat="@drawable/ajustescerrarsesion" />
 
                     <Button
                         android:id="@+id/Cerrar_sesion_boton"
@@ -369,7 +378,8 @@
                     android:layout_marginBottom="16dp"
                     app:tint="@color/white"
                     tools:layout_editor_absoluteX="178dp"
-                    tools:srcCompat="@drawable/ajustesDocumento" />
+                    android:src="@drawable/ajustesdocumento"
+                    tools:srcCompat="@drawable/ajustesdocumento" />
 
                 <Button
                     android:id="@+id/Politica_privacidad_boton"
@@ -379,7 +389,7 @@
                     android:layout_marginTop="15dp"
                     android:text="Politica de privacidad"
                     android:textSize="18dp"
-                    style="@style/EstiloBotonRectangularAzul"s
+                    style="@style/EstiloBotonRectangularAzul"
                     tools:layout_editor_absoluteX="86dp"
                     tools:layout_editor_absoluteY="47dp" />
 
