@@ -5,12 +5,9 @@
     <string name="btn_text_shield">Escudo</string>
     <string name="btn_text_settings">Ajustes</string>
     <string name="all_components">All Components</string>
-    <string name="vpn">VPN</string>
     <string name="passw">PASS W</string>
-    <string name="components">All components</string>
     <string name="textoCheckIn">Su protección esta</string>
     <string name="textoCheckInColor">Activa</string>
-    <string name="VPN">- VPN</string>
     <string name="Contraseñas">- Contraseñas</string>
     <string name="ProtectorWeb">- Protector Web</string>
     <string name="Antipublicidad">- Anti Publicidad</string>
@@ -29,4 +26,12 @@
     </string>
 
     <string name="ubicados">Estamos ubicados en: </string>
+    <string name="components">Mis componentes</string>
+    <string name="vpn">Virtual Private Network</string>
+    <string name="vpnpequeño">VPN</string>
+    <string name="VPN">VPN</string>
+    <string name="info_componente">Info componente</string>
+
+
+
 </resources>

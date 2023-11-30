@@ -12,35 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EneyX"
         tools:targetApi="31">
+
         <activity
-            android:name=".activity_inicio_eney"
-            android:exported="false" />
-        <activity
-            android:name=".activity_SomosNosotros"
-            android:exported="false" />
-        <activity
-            android:name=".activity_CheckIn"
-            android:exported="false" />
-        <activity
-            android:name=".activity_perfilUsuario"
-            android:exported="false" />
-        <activity
-            android:name=".activity_register"
-            android:exported="false" />
-        <activity
-            android:name=".activity_Ajustes"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity_login"
-            android:exported="true" >
-        <intent-filter>
+            android:name=".activity_componente_main_new"
+            android:exported="true">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
