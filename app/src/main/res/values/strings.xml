@@ -1,32 +1,13 @@
 <resources>
-
     <string name="app_name">Eney-X</string>
     <string name="btn_text_profile">Perfil</string>
     <string name="btn_text_shield">Escudo</string>
     <string name="btn_text_settings">Ajustes</string>
     <string name="all_components">All Components</string>
     <string name="passw">PASS W</string>
-    <string name="textoCheckIn">Su protección esta</string>
-    <string name="textoCheckInColor">Activa</string>
-    <string name="Contraseñas">- Contraseñas</string>
-    <string name="ProtectorWeb">- Protector Web</string>
-    <string name="Antipublicidad">- Anti Publicidad</string>
-    <string name="ControlParental">- Control Parental</string>
-    <string name="Krilia">- Krilia</string>
-    <string name="textoBotonVerde">No hay problemas que atender</string>
-
-    <string name="nosotros">Nosotros</string>
-    <string name="quienesSomos">
-        Nos dedicamos a proteger a individuos y empresas con soluciones avanzadas que van más allá de lo convencional.
-        Nuestro equipo altamente capacitado trabaja incansablemente para anticipar y neutralizar amenazas emergentes.
-        En la vanguardia de la innovación, ofrecemos una suite de productos que garantizan máxima protección en un paisaje digital cambiante.
-        En Eney-X, no solo proporcionamos software de seguridad; brindamos paz mental.
-        Gracias por elegirnos como su defensor digital.
-
-    </string>
-
-    <string name="ubicados">Estamos ubicados en: </string>
     <string name="components">Mis componentes</string>
     <string name="vpn">Virtual Private Network</string>
     <string name="vpnpequeño">VPN</string>
+
+
 </resources>

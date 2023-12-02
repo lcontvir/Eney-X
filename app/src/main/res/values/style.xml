@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Titulo">
-        <item name="background">@drawable/boton_bordes_blancos</item>
-        <item name="android:textAlignment">textEnd</item>
-        <item name="android:textColor">@color/texto</item>
-        <item name="android:textSize">34dp</item>
-    </style>
-    <style name="texto">
-        <item name="android:textColor"> @color/texto</item>
-        <item name="android:textSize"> 20dp</item>
-    </style>
+
 
 
     <style name="BotonGrande">
@@ -59,6 +50,10 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">28sp</item>
         <item name="android:background">#595959</item>
+    </style>
+    <style name="Texto_blanco_boton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item> <!-- Ajusta el tamaño de la letra según tus necesidades -->
     </style>
 
 
