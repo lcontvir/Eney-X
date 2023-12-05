@@ -19,7 +19,7 @@
             android:name=".activity_componente_unico"
             android:exported="false" />
         <activity
-            android:name=".activity_inicio_eney"
+            android:name=".activity_login"
             android:exported="false" />
         <activity
             android:name=".activity_SomosNosotros"
@@ -40,7 +40,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_login"
+            android:name=".activity_inicio_eney"
             android:exported="true" >
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

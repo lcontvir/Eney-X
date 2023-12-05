@@ -15,15 +15,56 @@ public class activity_SomosNosotros extends AppCompatActivity {
         setContentView(R.layout.activity_somos_nosotros);
 
         ImageButton volver = findViewById(R.id.IbVolver);
+        ImageButton Ajustes = findViewById(R.id.IbAjustes);
+        ImageButton Home = findViewById(R.id.IbCasa);
+        ImageButton Seguridad = findViewById(R.id.IbEscudo);
+
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+
                 Intent intent = new Intent(activity_SomosNosotros.this, activity_perfilUsuario.class);
 
                 startActivity(intent);
                 finish();
             }
+
+
         });
+        Ajustes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+                Intent intent = new Intent(activity_SomosNosotros.this, activity_Ajustes.class);
+
+                startActivity(intent);
+                finish();
+            }
+        });
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+                Intent intent = new Intent(activity_SomosNosotros.this, activity_CheckIn.class);
+
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        Seguridad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+                Intent intent = new Intent(activity_SomosNosotros.this, activity_SomosNosotros.class);
+
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
     }
 }
