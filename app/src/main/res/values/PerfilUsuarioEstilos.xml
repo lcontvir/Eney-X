@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EstiloImagenCircular">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="EstiloBotonRectangular">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="shapeAppearance">@id/rectangles</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/amarillito</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+
+</resources>

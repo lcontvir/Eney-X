@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity_Ajustes">
+
+
+    <ImageButton
+        android:id="@+id/VueltaAtras"
+        android:layout_width="62dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="volver atrás"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/flechaazulblancarellenaizquierda"
+        android:src="@drawable/flechaazulblancarellenaizquierda"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:id="@+id/Ajustes"
+        android:layout_width="332dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/boton_bordes_blancos"
+        android:contentDescription="Ajustes"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AjustesTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="8dp"
+        android:text="Ajustes"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="@+id/Ajustes"
+        app:layout_constraintTop_toTopOf="@+id/Ajustes" />
+
+    <ImageView
+        android:id="@+id/Logo_eney"
+        android:layout_width="283dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="194dp"
+        android:layout_marginBottom="20dp"
+        android:alpha="0.2"
+        app:layout_constraintBottom_toTopOf="@+id/ScrollView"
+        app:layout_constraintStart_toStartOf="@+id/Ajustes"
+        android:src="@drawable/logoeneyx"
+        tools:srcCompat="@drawable/logoeneyx" />
+
+    <ImageView
+        android:id="@+id/Iphone"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ScrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/iphoneicon"
+        tools:srcCompat="@drawable/iphoneicon" />
+
+    <TextView
+        android:id="@+id/Usuario"
+        android:layout_width="186dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="53dp"
+        android:text="Iphone de Martin "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/Iphone"
+        app:layout_constraintTop_toBottomOf="@+id/Ajustes" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="388dp"
+        android:layout_height="551dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Usuario">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boton_bordes_blancos"
+                android:layout_marginVertical="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="367dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/boton_bordes_blancos"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Ajustes_Usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="   Ajustes del Usuario"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        tools:layout_editor_absoluteX="15dp"
+                        tools:layout_editor_absoluteY="141dp" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Modo_nocturno"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/ajustesnoche"
+                    tools:srcCompat="@drawable/ajustesnoche" />
+
+                <Button
+                    android:id="@+id/Modo_nocturno_boton"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Modo nocturno"
+                    android:textSize="22dp"
+                    style="@style/EstiloBotonRectangularAzul"
+                    tools:layout_editor_absoluteX="18dp"
+                    tools:layout_editor_absoluteY="108dp" />
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/Sonido"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/ajustessonido"
+                        app:tint="@color/white"
+                        tools:layout_editor_absoluteX="178dp"
+                        tools:srcCompat="@drawable/ajustessonido" />
+
+                    <Button
+                        android:id="@+id/Sonido_boton"
+                        style="@style/EstiloBotonRectangularAzul"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Sonido"
+                        android:textSize="22dp"
+                        tools:layout_editor_absoluteX="86dp"
+                        tools:layout_editor_absoluteY="47dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Brillo_pantalla"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="15dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    android:src="@drawable/ajustessol"
+                    tools:srcCompat="@drawable/ajustessol" />
+
+                <Button
+                    android:id="@+id/Brillo_pantalla_boton"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Brillo pantalla"
+                    android:textSize="22dp"
+                    style="@style/EstiloBotonRectangularAzul"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Idioma"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    android:src="@drawable/ajustesidioma"
+                    tools:srcCompat="@drawable/ajustesidioma" />
+
+                <Button
+                    android:id="@+id/Idioma_boton"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Idioma"
+                    android:textSize="22dp"
+                    style="@style/EstiloBotonRectangularAzul"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Notificaciones"
+                    android:layout_width="45dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    android:src="@drawable/ajustesnotificacion"
+                    tools:srcCompat="@drawable/ajustesnotificacion" />
+
+                <Button
+                    android:id="@+id/Notificaciones_boton"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Notificaciones"
+                    android:textSize="22dp"
+                    style="@style/EstiloBotonRectangularAzul"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boton_bordes_blancos"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="363dp"
+                    android:layout_height="73dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/boton_bordes_blancos"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Ajustes_Cuenta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Ajustes de la cuenta"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        tools:layout_editor_absoluteX="15dp"
+                        tools:layout_editor_absoluteY="141dp" />
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/Cerrar_sesion"
+                            android:layout_width="45dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            app:tint="@color/white"
+                            tools:layout_editor_absoluteX="178dp"
+                            android:src="@drawable/ajustescerrarsesion"
+                            tools:srcCompat="@drawable/ajustescerrarsesion" />
+
+                    <Button
+                        android:id="@+id/Cerrar_sesion_boton"
+                        style="@style/EstiloBotonRectangularAzul"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Cerrar sesion"
+                        android:textSize="22dp"
+                        tools:layout_editor_absoluteX="86dp"
+                        tools:layout_editor_absoluteY="47dp" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Politica_privacidad"
+                    android:layout_width="45dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="16dp"
+                    app:tint="@color/white"
+                    tools:layout_editor_absoluteX="178dp"
+                    android:src="@drawable/ajustesdocumento"
+                    tools:srcCompat="@drawable/ajustesdocumento" />
+
+                <Button
+                    android:id="@+id/Politica_privacidad_boton"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Politica de privacidad"
+                    android:textSize="18dp"
+                    style="@style/EstiloBotonRectangularAzul"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="47dp" />
+
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
