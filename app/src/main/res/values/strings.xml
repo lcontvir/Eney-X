@@ -31,4 +31,6 @@
     <string name="vpnpequeño">VPN</string>
     <string name="VPN">VPN</string>
     <string name="info_componente">Info componente</string>
+    <string name="sin_fallos">Funcionando sin fallos</string>
+    <string name="lugar_fav">Lugares_favoritos</string>
 </resources>

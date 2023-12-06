@@ -1,7 +1,9 @@
 package es.eney_x.eney_x;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 public class activity_componente_unico extends Activity {
@@ -16,6 +18,22 @@ public class activity_componente_unico extends Activity {
 
         // Llamada al método para cargar imágenes
         cargarImagenes();
+
+        // Encuentra el botón de retroceso por su ID
+        ImageView backButton = findViewById(R.id.boton_atras);
+
+        // Agrega un OnClickListener al botón de retroceso
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Define la nueva actividad que quieres abrir (activity_componente_main)
+                Intent intent = new Intent(activity_componente_unico.this, activity_componente_main.class);
+
+                // Inicia la nueva actividad y cierra la actual
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     // Otros métodos del ciclo de vida de la actividad, si es necesario

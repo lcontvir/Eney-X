@@ -78,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:text="Funcionando sin fallos"
+                    android:text="@string/sin_fallos"
                     android:textColor="#00FF00"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +116,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Lugares Favoritos"
+                        android:text="@string/lugar_fav"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="@+id/lugarescolores"
@@ -209,7 +209,7 @@
                         app:layout_constraintVertical_bias="0.0" />
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/mas_info"
                         style="@style/mas_informacion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -730,7 +730,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
         android:background="@android:color/transparent"
-        android:contentDescription="Botón de casita"
+        android:contentDescription="Botón de ajustes"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator"

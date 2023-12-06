@@ -1,13 +1,15 @@
 package es.eney_x.eney_x;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class activity_componente_main extends AppCompatActivity {
 
@@ -23,6 +25,59 @@ public class activity_componente_main extends AppCompatActivity {
 
         cargaImagenes();
         setupExpandableLayout();
+
+
+        Button button = findViewById(R.id.mas_info);
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(activity_componente_main.this, activity_componente_unico.class);
+                startActivity(intent);
+            }
+        });
+
+
+        ImageButton ajustesButton = findViewById(R.id.ajustes);
+
+
+        ajustesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(activity_componente_main.this, activity_Ajustes.class);
+
+                startActivity(intent);
+            }
+        });
+
+
+        ImageButton escudoButton = findViewById(R.id.boton_escudo);
+
+
+        escudoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(activity_componente_main.this, activity_CheckIn.class);
+
+
+                startActivity(intent);
+            }
+        });
+
+        ImageButton casitaButton = findViewById(R.id.botonCasita);
+
+        casitaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(activity_componente_main.this, activity_componente_main.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void cargaImagenes() {
@@ -38,11 +93,11 @@ public class activity_componente_main extends AppCompatActivity {
         ajustes = findViewById(R.id.ajustes);
         ajustes.setImageResource(R.drawable.ajustes);
 
-        // Encuentra las vistas dentro del expandableLayout
+
         nombreVpn1 = findViewById(R.id.nombreVpn1);
         estadoVpn = findViewById(R.id.estadoVpn);
 
-        // Encuentra el constraintLayout interno
+
         constraintLayout = findViewById(R.id.constraintLayout_vpn);
     }
 
@@ -52,9 +107,9 @@ public class activity_componente_main extends AppCompatActivity {
         expandableLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Invierte el estado de isExpanded
+
                 isExpanded = !isExpanded;
-                // Llama a la función para animar los cambios en el diseño
+
                 animateLayoutChanges(expandableLayout);
             }
         });
