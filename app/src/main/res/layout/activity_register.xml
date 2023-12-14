@@ -8,6 +8,17 @@
     tools:context=".activity_register">
 
 
+    <ImageView
+        android:id="@+id/iv_logo_eneyx"
+        android:layout_width="218dp"
+        android:layout_height="207dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginBottom="556dp"
+        android:alpha=".3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logoeneyx" />
+
     <TextView
         android:id="@+id/TvTextoTitulo"
         style="@style/RegisterMainTheme"
@@ -143,7 +154,7 @@
         android:layout_marginTop="23dp"
         android:layout_marginEnd="51dp"
         android:layout_marginBottom="31dp"
-        android:background="@drawable/barra_redondeada"
+        android:background="@drawable/barra_redondeada_registro_y_login"
         app:layout_constraintBottom_toTopOf="@+id/FacebookButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
@@ -155,7 +166,7 @@
         android:layout_marginStart="54dp"
         android:layout_marginTop="23dp"
         android:layout_marginBottom="33dp"
-        android:background="@drawable/barra_redondeada"
+        android:background="@drawable/barra_redondeada_registro_y_login"
         app:layout_constraintBottom_toTopOf="@+id/GoogleButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
@@ -187,23 +198,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/iv_logo_eneyx"
-        android:layout_width="225dp"
-        android:layout_height="182dp"
-        android:layout_marginStart="178dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="533dp"
-        android:alpha=".3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logoeneyx" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

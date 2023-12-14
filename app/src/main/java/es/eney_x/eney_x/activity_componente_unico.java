@@ -48,7 +48,7 @@ public class activity_componente_unico extends Activity {
 
     // Método para cargar imágenes en ImageView
     private void cargarImagenes() {
-        cargarImagen(R.id.logo, R.drawable.logoeneyx);
+        cargarImagen(R.id.logoeney, R.drawable.logoeneyx);
         cargarImagen(R.id.check1, R.drawable.check);
         cargarImagen(R.id.check2, R.drawable.check);
         cargarImagen(R.id.check3, R.drawable.check);

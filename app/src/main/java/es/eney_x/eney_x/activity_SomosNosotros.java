@@ -15,9 +15,9 @@ public class activity_SomosNosotros extends AppCompatActivity {
         setContentView(R.layout.activity_somos_nosotros);
 
         ImageButton volver = findViewById(R.id.IbVolver);
-        ImageButton Ajustes = findViewById(R.id.IbAjustes);
-        ImageButton Home = findViewById(R.id.IbCasa);
-        ImageButton Seguridad = findViewById(R.id.IbEscudo);
+        ImageButton Ajustes = findViewById(R.id.botonAjustes);
+        ImageButton Home = findViewById(R.id.botonCasa);
+        ImageButton Seguridad = findViewById(R.id.botonEscudo);
 
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +64,5 @@ public class activity_SomosNosotros extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 }

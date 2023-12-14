@@ -40,7 +40,7 @@ public class activity_componente_main extends AppCompatActivity {
         });
 
 
-        ImageButton ajustesButton = findViewById(R.id.ajustes);
+        ImageButton ajustesButton = findViewById(R.id.botonAjustes);
 
 
         ajustesButton.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +54,7 @@ public class activity_componente_main extends AppCompatActivity {
         });
 
 
-        ImageButton escudoButton = findViewById(R.id.boton_escudo);
+        ImageButton escudoButton = findViewById(R.id.botonEscudo);
 
 
         escudoButton.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +68,7 @@ public class activity_componente_main extends AppCompatActivity {
             }
         });
 
-        ImageButton casitaButton = findViewById(R.id.botonCasita);
+        ImageButton casitaButton = findViewById(R.id.botonCasa);
 
         casitaButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,16 +81,16 @@ public class activity_componente_main extends AppCompatActivity {
     }
 
     private void cargaImagenes() {
-        casa = findViewById(R.id.botonCasita);
+        casa = findViewById(R.id.botonCasa);
         casa.setImageResource(R.drawable.casa);
 
-        escudo = findViewById(R.id.boton_escudo);
+        escudo = findViewById(R.id.botonEscudo);
         escudo.setImageResource(R.drawable.escudo);
 
-        logo = findViewById(R.id.logo);
+        logo = findViewById(R.id.logoeney);
         logo.setImageResource(R.drawable.logoeneyx);
 
-        ajustes = findViewById(R.id.ajustes);
+        ajustes = findViewById(R.id.botonAjustes);
         ajustes.setImageResource(R.drawable.ajustes);
 
 

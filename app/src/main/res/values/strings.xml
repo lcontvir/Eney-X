@@ -12,6 +12,7 @@
     <string name="ProtectorWeb">- Protector Web</string>
     <string name="Antipublicidad">- Anti Publicidad</string>
     <string name="ControlParental">- Control Parental</string>
+    <string name="VPNCheck">- VPN</string>
     <string name="Krilia">- Krilia</string>
     <string name="textoBotonVerde">No hay problemas que atender</string>
 
@@ -27,7 +28,7 @@
 
     <string name="ubicados">Estamos ubicados en: </string>
     <string name="components">Mis componentes</string>
-    <string name="vpn">Virtual Private Network</string>
+    <string name="virtual_private_network">Virtual Private Network</string>
     <string name="vpnpequeño">VPN</string>
     <string name="VPN">VPN</string>
     <string name="info_componente">Info componente</string>

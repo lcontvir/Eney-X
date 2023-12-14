@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class activity_perfilUsuario extends AppCompatActivity{
     @Override
@@ -12,9 +13,17 @@ public class activity_perfilUsuario extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_usuario);
 
-        ImageButton Ajustes = findViewById(R.id.BotonAjustes);
-        ImageButton Home = findViewById(R.id.BotonCasita);
-        ImageButton Seguridad = findViewById(R.id.BotonEscudo);
+        ImageButton Ajustes = findViewById(R.id.botonAjustes);
+        ImageButton Home = findViewById(R.id.botonCasa);
+        ImageButton Seguridad = findViewById(R.id.botonEscudo);
+
+        TextView Nombre = findViewById(R.id.Nombre);
+        TextView Correo = findViewById(R.id.Dispositivo);
+
+        Usuario usuario = Usuario.getInstance();
+
+        Nombre.setText(usuario.getNombre());
+        Correo.setText(usuario.getCorreo());
 
         Ajustes.setOnClickListener(new View.OnClickListener() {
             @Override
