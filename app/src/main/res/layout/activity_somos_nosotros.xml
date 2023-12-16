@@ -62,14 +62,15 @@
     <TextView
         android:id="@+id/TvNosotros"
         style="@style/Titulo"
-        android:layout_width="381dp"
-        android:layout_height="73dp"
+        android:layout_width="319dp"
+        android:layout_height="72dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/boton_bordes_blancos"
         android:gravity="center"
         android:includeFontPadding="true"
         android:paddingRight="30dp"
         android:text="Nosotros"
+        android:textAlignment="viewEnd"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,6 +79,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="110dp"
@@ -127,17 +129,17 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="375dp"
+        android:layout_width="387dp"
+        android:layout_height="452dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="31dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="221dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvNosotros"
         app:layout_constraintVertical_bias="1.0">
 
 
@@ -149,12 +151,13 @@
             <TextView
                 android:id="@+id/subtitulo"
                 style="@style/texto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="341dp"
                 android:layout_marginTop="8dp"
                 android:paddingStart="19dp"
                 android:paddingEnd="19dp"
                 android:text="@string/quienesSomos"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
