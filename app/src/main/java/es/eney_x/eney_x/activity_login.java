@@ -25,6 +25,8 @@ public class activity_login extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(activity_login.this, activity_register.class);
                 startActivity(intent);
+                finish();
+
             }
         });
         go_to_mainplace.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +39,8 @@ public class activity_login extends AppCompatActivity {
                 usuario.setNombre("Martin Buda Cristo");
 
                 startActivity(intent);
+                finish();
+
             }
         });
     }

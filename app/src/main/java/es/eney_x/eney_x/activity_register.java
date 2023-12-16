@@ -27,6 +27,8 @@ public class activity_register extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(activity_register.this, activity_login.class);
                 startActivity(intent);
+                finish();
+
             }
         });
         go_to_mainplace.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +41,8 @@ public class activity_register extends AppCompatActivity {
                 usuario.setNombre(nombre.getText().toString());
 
                 startActivity(intent);
+                finish();
+
             }
         });
     }

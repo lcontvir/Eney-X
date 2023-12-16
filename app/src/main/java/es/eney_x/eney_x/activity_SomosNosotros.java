@@ -47,7 +47,7 @@ public class activity_SomosNosotros extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_SomosNosotros.this, activity_CheckIn.class);
+                Intent intent = new Intent(activity_SomosNosotros.this, activity_componente_main.class);
 
                 startActivity(intent);
                 finish();
@@ -58,7 +58,7 @@ public class activity_SomosNosotros extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_SomosNosotros.this, activity_SomosNosotros.class);
+                Intent intent = new Intent(activity_SomosNosotros.this, activity_CheckIn.class);
 
                 startActivity(intent);
                 finish();
