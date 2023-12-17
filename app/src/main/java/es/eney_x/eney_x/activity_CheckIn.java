@@ -22,7 +22,7 @@ public class activity_CheckIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el bot贸n, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_CheckIn.this, activity_Ajustes.class);
+                Intent intent = new Intent(activity_CheckIn.this, activity_perfilUsuario.class);
 
                 startActivity(intent);
                 finish();
@@ -32,7 +32,7 @@ public class activity_CheckIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el bot贸n, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_CheckIn.this, activity_CheckIn.class);
+                Intent intent = new Intent(activity_CheckIn.this, activity_componente_main.class);
 
                 startActivity(intent);
                 finish();
@@ -43,7 +43,7 @@ public class activity_CheckIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el bot贸n, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_CheckIn.this, activity_SomosNosotros.class);
+                Intent intent = new Intent(activity_CheckIn.this, activity_CheckIn.class);
 
                 startActivity(intent);
                 finish();

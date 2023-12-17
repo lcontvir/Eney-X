@@ -1,18 +1,21 @@
 package es.eney_x.eney_x;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class activity_componente_main extends AppCompatActivity {
 
     ImageView casa, escudo, ajustes, logo;
-    ConstraintLayout expandableLayout, constraintLayout;
+    ConstraintLayout constraintLayoutPadre, constraintLayoutHijo;
     boolean isExpanded = false;
     TextView nombreVpn1, estadoVpn;
 
@@ -21,53 +24,74 @@ public class activity_componente_main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_componente_main);
 
-        cargaImagenes();
         setupExpandableLayout();
-    }
 
-    private void cargaImagenes() {
-        casa = findViewById(R.id.botonCasita);
-        casa.setImageResource(R.drawable.casa);
+        Button button = findViewById(R.id.mas_info);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        escudo = findViewById(R.id.boton_escudo);
-        escudo.setImageResource(R.drawable.escudo);
+                Intent intent = new Intent(activity_componente_main.this, activity_componente_unico.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-        logo = findViewById(R.id.logo);
-        logo.setImageResource(R.drawable.logoeneyx);
 
-        ajustes = findViewById(R.id.ajustes);
-        ajustes.setImageResource(R.drawable.ajustes);
+        ImageButton ajustesButton = findViewById(R.id.botonAjustes);
+        ajustesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        // Encuentra las vistas dentro del expandableLayout
-        nombreVpn1 = findViewById(R.id.nombreVpn1);
-        estadoVpn = findViewById(R.id.estadoVpn);
+                Intent intent = new Intent(activity_componente_main.this, activity_perfilUsuario.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-        // Encuentra el constraintLayout interno
-        constraintLayout = findViewById(R.id.constraintLayout_vpn);
+
+        ImageButton escudoButton = findViewById(R.id.botonEscudo);
+        escudoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity_componente_main.this, activity_CheckIn.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        ImageButton casitaButton = findViewById(R.id.botonCasa);
+
+        casitaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(activity_componente_main.this, activity_componente_main.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void setupExpandableLayout() {
-        expandableLayout = findViewById(R.id.expandableLayout);
-
-        expandableLayout.setOnClickListener(new View.OnClickListener() {
+        constraintLayoutPadre = findViewById(R.id.constrainLayoutPadre);
+        constraintLayoutHijo = findViewById(R.id.constraintLayoutHijo);
+        constraintLayoutPadre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Invierte el estado de isExpanded
+
                 isExpanded = !isExpanded;
-                // Llama a la función para animar los cambios en el diseño
-                animateLayoutChanges(expandableLayout);
+                animateLayoutChanges(constraintLayoutHijo);
             }
         });
     }
 
     private void animateLayoutChanges(View expandableLayout) {
-        // Muestra u oculta la información dependiendo del estado de isExpanded
         if (isExpanded) {
-            // Muestra el constraintLayout interno
-            constraintLayout.setVisibility(View.VISIBLE);
+            expandableLayout.setVisibility(View.VISIBLE);
         } else {
-            // Oculta el constraintLayout interno
-            constraintLayout.setVisibility(View.GONE);
+            expandableLayout.setVisibility(View.GONE);
         }
     }
 }

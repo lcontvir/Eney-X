@@ -15,9 +15,9 @@ public class activity_SomosNosotros extends AppCompatActivity {
         setContentView(R.layout.activity_somos_nosotros);
 
         ImageButton volver = findViewById(R.id.IbVolver);
-        ImageButton Ajustes = findViewById(R.id.IbAjustes);
-        ImageButton Home = findViewById(R.id.IbCasa);
-        ImageButton Seguridad = findViewById(R.id.IbEscudo);
+        ImageButton Ajustes = findViewById(R.id.botonAjustes);
+        ImageButton Home = findViewById(R.id.botonCasa);
+        ImageButton Seguridad = findViewById(R.id.botonEscudo);
 
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +47,7 @@ public class activity_SomosNosotros extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_SomosNosotros.this, activity_CheckIn.class);
+                Intent intent = new Intent(activity_SomosNosotros.this, activity_componente_main.class);
 
                 startActivity(intent);
                 finish();
@@ -58,13 +58,11 @@ public class activity_SomosNosotros extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_SomosNosotros.this, activity_SomosNosotros.class);
+                Intent intent = new Intent(activity_SomosNosotros.this, activity_CheckIn.class);
 
                 startActivity(intent);
                 finish();
             }
         });
-
-
     }
 }

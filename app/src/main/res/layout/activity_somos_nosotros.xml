@@ -7,28 +7,70 @@
     android:background="@color/background"
     tools:context=".activity_SomosNosotros">
 
-    <ImageView
-        android:id="@+id/IvLogoEney"
-        android:layout_width="231dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="230dp"
-        android:alpha="0.3"
-        android:src="@drawable/logoeneyx"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintStart_toStartOf="@+id/TvNosotros"
-        tools:srcCompat="@drawable/logoeneyx" />
+    <View
+        android:id="@+id/navvar"
+        android:layout_width="411dp"
+        android:layout_height="81dp"
+        android:background="@drawable/navvar_bloque"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/botonAjustes"
+        android:layout_width="136dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Boton Ajustes"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ajustes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonEscudo"
+        app:tint="@color/Blanco" />
+
+    <ImageButton
+        android:id="@+id/botonCasa"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Boton casa"
+        android:scaleType="fitCenter"
+        android:src="@drawable/casa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonEscudo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/botonEscudo"
+        android:layout_width="136dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Boton Escudo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/escudo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonAjustes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonCasa" />
 
     <TextView
         android:id="@+id/TvNosotros"
         style="@style/Titulo"
-        android:layout_width="381dp"
-        android:layout_height="73dp"
+        android:layout_width="319dp"
+        android:layout_height="72dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/boton_bordes_blancos"
         android:gravity="center"
         android:includeFontPadding="true"
         android:paddingRight="30dp"
         android:text="Nosotros"
+        android:textAlignment="viewEnd"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,91 +78,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ImageView
-        android:id="@+id/IvSeparadorTop"
-        android:layout_width="450dp"
-        android:layout_height="5dp"
-        android:background="@color/white"
-        android:scaleType="fitXY"
-        android:src="@android:drawable/divider_horizontal_bright"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.896"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/IvSeparadorDerech"
-        android:layout_width="6dp"
-        android:layout_height="80dp"
-        android:background="@color/white"
-        android:scaleType="fitXY"
-        android:src="@android:drawable/divider_horizontal_bright"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.698"
-        app:layout_constraintStart_toStartOf="@+id/IvSeparadorTop"
-        app:layout_constraintTop_toTopOf="@+id/IvSeparadorTop" />
-
-    <ImageView
-        android:id="@+id/IvSeparadorIzq"
-        android:layout_width="6dp"
-        android:layout_height="80dp"
-        android:background="@color/white"
-        android:scaleType="fitXY"
-        android:src="@android:drawable/divider_horizontal_bright"
-        app:layout_constraintEnd_toStartOf="@+id/IvSeparadorDerech"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="@+id/IvSeparadorTop"
-        app:layout_constraintTop_toTopOf="@+id/IvSeparadorTop" />
-
-    <ImageButton
-        android:id="@+id/IbCasa"
-        android:layout_width="67dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="29dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="Botón de casita"
-        android:scaleType="fitCenter"
-        android:src="@drawable/casa"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/IvSeparadorIzq"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IvSeparadorTop"
-        tools:src="@drawable/casa" />
-
-    <ImageButton
-        android:id="@+id/IbEscudo"
-        android:layout_width="75dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="9dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="Botón de casita"
-        android:scaleType="fitCenter"
-        android:src="@drawable/escudo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/IvSeparadorDerech"
-        app:layout_constraintStart_toEndOf="@+id/IvSeparadorIzq"
-        app:layout_constraintTop_toBottomOf="@+id/IvSeparadorTop"
-        tools:src="@drawable/escudo" />
-
-    <ImageButton
-        android:id="@+id/IbAjustes"
-        android:layout_width="68dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="Botón de casita"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ajustes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/IvSeparadorDerech"
-        app:layout_constraintTop_toBottomOf="@+id/IvSeparadorTop"
-        tools:src="@drawable/ajustes" />
-
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="110dp"
@@ -170,17 +129,17 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="375dp"
+        android:layout_width="387dp"
+        android:layout_height="452dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="31dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="221dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvNosotros"
         app:layout_constraintVertical_bias="1.0">
 
 
@@ -192,12 +151,13 @@
             <TextView
                 android:id="@+id/subtitulo"
                 style="@style/texto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="341dp"
                 android:layout_marginTop="8dp"
                 android:paddingStart="19dp"
                 android:paddingEnd="19dp"
                 android:text="@string/quienesSomos"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"

@@ -25,13 +25,13 @@
             android:name=".activity_SomosNosotros"
             android:exported="false" />
         <activity
-            android:name=".activity_CheckIn"
+            android:name=".activity_inicio_eney"
             android:exported="false" />
         <activity
             android:name=".activity_perfilUsuario"
             android:exported="false" />
         <activity
-            android:name=".activity_register"
+            android:name=".activity_CheckIn"
             android:exported="false" />
         <activity
             android:name=".activity_Ajustes"
@@ -40,7 +40,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_inicio_eney"
+            android:name=".activity_register"
             android:exported="true" >
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

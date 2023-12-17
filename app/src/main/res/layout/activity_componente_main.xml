@@ -7,27 +7,68 @@
     tools:context=".activity_componente_main">
 
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="231dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginBottom="600dp"
-        android:alpha="0.3"
+    <View
+        android:id="@+id/navvar"
+        android:layout_width="411dp"
+        android:layout_height="81dp"
+        android:background="@drawable/navvar_bloque"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/scrollView2"
-        tools:srcCompat="@drawable/logoeneyx" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/botonEscudo"
+        android:layout_width="136dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Boton Escudo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/escudo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonAjustes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonCasa" />
+
+    <ImageButton
+        android:id="@+id/botonAjustes"
+        android:layout_width="136dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Boton Ajustes"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ajustes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonEscudo"
+        app:tint="@color/Blanco" />
+
+    <ImageButton
+        android:id="@+id/botonCasa"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Boton casa"
+        android:scaleType="fitCenter"
+        android:src="@drawable/casa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonEscudo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="395dp"
-        android:layout_height="561dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewSeparator3"
+        android:layout_width="398dp"
+        android:layout_height="664dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/botonEscudo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Components"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/Components">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,7 +78,7 @@
 
             <!-- Tarjeta VPN -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/expandableLayout"
+                android:id="@+id/constrainLayoutPadre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -78,7 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:text="Funcionando sin fallos"
+                    android:text="@string/sin_fallos"
                     android:textColor="#00FF00"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +127,7 @@
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout_vpn"
+                    android:id="@+id/constraintLayoutHijo"
                     android:layout_width="387dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -103,7 +144,7 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/vpn"
+                        android:text="@string/virtual_private_network"
                         android:textColor="#85FFFFFF"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -116,7 +157,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Lugares Favoritos"
+                        android:text="@string/lugar_fav"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="@+id/lugarescolores"
@@ -209,7 +250,7 @@
                         app:layout_constraintVertical_bias="0.0" />
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/mas_info"
                         style="@style/mas_informacion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -656,85 +697,6 @@
         android:text="@string/components"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageViewSeparator3"
-        android:layout_width="9dp"
-        android:layout_height="93dp"
-        android:background="@color/white"
-        android:scaleType="fitXY"
-        android:src="@android:drawable/divider_horizontal_bright"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.343"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageViewSeparator4"
-        android:layout_width="9dp"
-        android:layout_height="94dp"
-        android:layout_marginEnd="128dp"
-        android:background="@color/white"
-        android:scaleType="fitXY"
-        android:src="@android:drawable/divider_horizontal_bright"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageViewSeparator3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageViewSeparator"
-        android:layout_width="407dp"
-        android:layout_height="7dp"
-        android:background="@color/white"
-        android:scaleType="fitXY"
-        android:src="@android:drawable/divider_horizontal_bright"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewSeparator3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/botonCasita"
-        android:layout_width="67dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="12dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="Botón de casita"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator"
-        app:layout_constraintVertical_bias="0.0"
-        tools:src="@drawable/casa" />
-
-    <ImageButton
-        android:id="@+id/boton_escudo"
-        android:layout_width="75dp"
-        android:layout_height="64dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="Botón de casita"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewSeparator4"
-        app:layout_constraintHorizontal_bias="0.472"
-        app:layout_constraintStart_toEndOf="@+id/imageViewSeparator3"
-        app:layout_constraintTop_toTopOf="@+id/ajustes"
-        app:layout_constraintVertical_bias="0.0"
-        tools:src="@drawable/escudo" />
-
-    <ImageButton
-        android:id="@+id/ajustes"
-        android:layout_width="68dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="32dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="Botón de casita"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSeparator"
-        tools:src="@drawable/ajustes" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
