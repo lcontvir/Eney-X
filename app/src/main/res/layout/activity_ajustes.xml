@@ -16,11 +16,11 @@
         android:layout_marginTop="28dp"
         android:background="@android:color/transparent"
         android:contentDescription="volver atrás"
-        android:scaleType="fitCenter"
-        android:src="@drawable/flechaazulblancarellenaizquierda"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/flechaazulblancarellenaizquierda" />
+        tools:src="@drawable/flechaazulblancarellenaizquierda"
+        android:src="@drawable/flechaazulblancarellenaizquierda"
+        android:scaleType="fitCenter"/>
 
     <ImageView
         android:id="@+id/Ajustes"
@@ -50,11 +50,11 @@
         android:id="@+id/Iphone"
         android:layout_width="37dp"
         android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/iphoneicon"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ScrollView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Ajustes"
+        android:src="@drawable/iphoneicon"
         tools:srcCompat="@drawable/iphoneicon" />
 
     <TextView
@@ -71,11 +71,10 @@
 
     <ScrollView
         android:id="@+id/ScrollView"
-        android:layout_width="392dp"
-        android:layout_height="638dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="370dp"
+        android:layout_height="596dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Usuario">
@@ -99,7 +98,6 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
-                    android:background="@drawable/boton_bordes_blancos"
                     android:orientation="horizontal">
 
                     <TextView
@@ -131,7 +129,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:src="@drawable/ajustesnoche"
-                        app:tint="@color/white"
+                        app:tint="@color/amarillito"
                         tools:srcCompat="@drawable/ajustesnoche" />
 
                     <Button
@@ -164,7 +162,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:src="@drawable/ajustessonido"
-                        app:tint="@color/white"
+                        app:tint="#FF9800"
                         tools:layout_editor_absoluteX="178dp"
                         tools:srcCompat="@drawable/ajustessonido" />
 
@@ -198,7 +196,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:src="@drawable/ajustessol"
-                        app:tint="@color/white"
+                        app:tint="#FF9800"
                         tools:layout_editor_absoluteX="178dp"
                         tools:srcCompat="@drawable/ajustessol" />
 
@@ -232,7 +230,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:src="@drawable/ajustesidioma"
-                        app:tint="@color/white"
+                        app:tint="#FF9800"
                         tools:layout_editor_absoluteX="178dp"
                         tools:srcCompat="@drawable/ajustesidioma" />
 
@@ -266,7 +264,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:src="@drawable/ajustesnotificacion"
-                        app:tint="@color/white"
+                        app:tint="#FF9800"
                         tools:layout_editor_absoluteX="178dp"
                         tools:srcCompat="@drawable/ajustesnotificacion" />
 
@@ -285,6 +283,7 @@
                 </LinearLayout>
             </LinearLayout>
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -298,7 +297,6 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
-                    android:background="@drawable/boton_bordes_blancos"
                     android:orientation="horizontal">
 
                     <TextView
@@ -331,7 +329,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:src="@drawable/ajustescerrarsesion"
-                        app:tint="@color/white"
+                        app:tint="@color/botonVerde"
                         tools:layout_editor_absoluteX="178dp"
                         tools:srcCompat="@drawable/ajustescerrarsesion" />
 
@@ -365,7 +363,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:src="@drawable/ajustesdocumento"
-                        app:tint="@color/white"
+                        app:tint="@color/botonVerde"
                         tools:layout_editor_absoluteX="178dp"
                         tools:srcCompat="@drawable/ajustesdocumento" />
 
