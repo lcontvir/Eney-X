@@ -43,7 +43,7 @@ public class activity_componente_main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(activity_componente_main.this, activity_Ajustes.class);
+                Intent intent = new Intent(activity_componente_main.this, activity_perfilUsuario.class);
                 startActivity(intent);
                 finish();
             }
