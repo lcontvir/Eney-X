@@ -52,11 +52,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AdminFirebase.writeDataToFirebase();
         AdminFirebase.RecuperarUsuario("palval");
         Usuario user = Usuario.getInstance();
-        Log.println(Log.DEBUG, "PRUEBA", "AAA");
-        user = Usuario.getInstance();
-        Log.println(Log.DEBUG, "PRUEBA", user.getApellidos());
+        while (user.isSyncing()){
 
+        }
+        Log.d("Prueba", user.getCorreo());
     }
 }

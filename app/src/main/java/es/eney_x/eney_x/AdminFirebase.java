@@ -12,18 +12,40 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AdminFirebase {
 
-    public static boolean RecuperarUsuario(String UID){
+
+    public static void writeDataToFirebase() {
+        // Puedes cambiar 'test' por el nombre de un nodo en tu base de datos
+        FirebaseDatabase.getInstance().getReference().child("test").setValue("Hello, Firebase!", new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@NonNull DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
+                if (databaseError == null) {
+                    Log.d("Firebase", "Conexión exitosa");
+                } else {
+                    Log.e("Firebase", "Error al conectar a la base de datos: " + databaseError.getMessage());
+                }
+            }
+        });
+    }
+
+    public static void RecuperarUsuario(String UID){
+        Usuario user;
+        user = Usuario.getInstance();
+        user.setSyncing(true);
+
+
         DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(UID);
-        boolean recuperado = false;
+        Log.d("a",usuarioRef.toString());
+
         usuarioRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("Import", "entra");
 
                 if (dataSnapshot.exists()) {
-                    Usuario user = dataSnapshot.getValue(Usuario.class);
-                    Log.d("Ejemplo", user.getApellidos());
-                    Usuario.setSingleton(user);
-                    Log.d("Ejemplo2", Usuario.getInstance().getApellidos());
+                    Usuario user;
+                    user = Usuario.getInstance();
+                    user.setSyncing(false);
+                    Log.d("Import", user.getApellidos());
                 }
             }
             @Override
@@ -31,10 +53,6 @@ public class AdminFirebase {
                 Log.e("FirebaseError", "Error al obtener datos del usuario: " + databaseError.getMessage());
             }
         });
-        if(Usuario.getInstance() != null){
-            recuperado = true;
-        }
-        return recuperado;
     }
 
     public static boolean ActualizarUsuario(String UID){
