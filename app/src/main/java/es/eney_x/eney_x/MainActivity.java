@@ -1,7 +1,11 @@
 package es.eney_x.eney_x;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private DatabaseReference databaseReference;
+    private EditText etNombre, etCorreoRegistro, etCorreoInicioSesion;
+
+    private Button btnRegistrarse, btnIniciarSesion;
+    private Usuario user;
 
  // Implementar esto a posteriori
     private void iniciarSesion(String correo, String contraseña) {
@@ -52,12 +60,67 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AdminFirebase.writeDataToFirebase();
-        AdminFirebase.RecuperarUsuario("palval");
-        Usuario user = Usuario.getInstance();
-        while (user.isSyncing()){
 
-        }
-        Log.d("Prueba", user.getCorreo());
+        user = Usuario.getInstance();
+        etNombre = findViewById(R.id.etNombre);
+        etCorreoRegistro = findViewById(R.id.etCorreoRegistro);
+        etCorreoInicioSesion = findViewById(R.id.etCorreoInicioSesion);
+
+        // Botón Registrarse
+        btnRegistrarse = findViewById(R.id.btnRegistrarse);
+        btnRegistrarse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                user.setNombre(etNombre.getText().toString());
+                user.setCorreo(etCorreoRegistro.getText().toString());
+                RegistrarUsuario();
+            }
+        });
+
+        // Botón Iniciar Sesión
+        btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
+        btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RecuperarUsuario(etCorreoInicioSesion.getText().toString().substring(0, etCorreoInicioSesion.getText().toString().indexOf("@")));
+            }
+        });
+    }
+
+    public void RecuperarUsuario(String UID){
+        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(UID);
+        usuarioRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    Usuario.setSingleton(dataSnapshot.getValue(Usuario.class));
+                    LogIn();
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e("FirebaseError", "Error al obtener datos del usuario: " + databaseError.getMessage());
+            }
+        });
+    }
+
+    public void RegistrarUsuario(){
+        DatabaseReference BBDD = FirebaseDatabase.getInstance().getReference();
+        BBDD.child(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@"))).setValue(Usuario.getInstance(), new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@NonNull DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
+                if (databaseError == null) {
+                    Log.d("Firebase", "Conexión exitosa");
+                    Toast.makeText(MainActivity.this, "Usuario Registrado", Toast.LENGTH_SHORT).show();
+                } else {
+                    Log.e("Firebase", "Error al conectar a la base de datos: " + databaseError.getMessage());
+                }
+            }
+        });
+    }
+
+    public void LogIn(){
+        Intent intent = new Intent(this, activity_perfilUsuario.class);
+        startActivity(intent);
     }
 }

@@ -15,7 +15,6 @@ public class Usuario {
     private String apellidos = "";
     private String password = "";
     private Privacidad privacidad;
-    private boolean syncing = false;
 
     private Usuario() {
     }
@@ -109,13 +108,5 @@ public class Usuario {
 
     public void setPrivacidad(Privacidad privacidad) {
         this.privacidad = privacidad;
-    }
-
-    public boolean isSyncing() {
-        return syncing;
-    }
-
-    public void setSyncing(boolean syncing) {
-        this.syncing = syncing;
     }
 }

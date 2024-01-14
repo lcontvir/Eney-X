@@ -1,5 +1,7 @@
 package es.eney_x.eney_x;
 
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -11,7 +13,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class AdminFirebase {
-
 
     public static void writeDataToFirebase() {
         // Puedes cambiar 'test' por el nombre de un nodo en tu base de datos
@@ -28,24 +29,15 @@ public class AdminFirebase {
     }
 
     public static void RecuperarUsuario(String UID){
-        Usuario user;
-        user = Usuario.getInstance();
-        user.setSyncing(true);
-
-
         DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(UID);
-        Log.d("a",usuarioRef.toString());
-
         usuarioRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Log.d("Import", "entra");
 
                 if (dataSnapshot.exists()) {
-                    Usuario user;
-                    user = Usuario.getInstance();
-                    user.setSyncing(false);
-                    Log.d("Import", user.getApellidos());
+
+                    Usuario.setSingleton(dataSnapshot.getValue(Usuario.class));
                 }
             }
             @Override
