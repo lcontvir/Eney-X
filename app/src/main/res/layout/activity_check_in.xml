@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#252627"
     android:backgroundTint="@color/background"
-    tools:context=".MainActivity">
+    tools:context=".vista.MainActivity">
 
     <View
         android:id="@+id/navvar"

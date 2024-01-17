@@ -1,7 +1,5 @@
-package es.eney_x.eney_x;
+package es.eney_x.eney_x.controlador;
 
-import android.content.Intent;
-import android.os.AsyncTask;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -11,6 +9,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import es.eney_x.eney_x.modelo.Usuario;
 
 public class AdminFirebase {
 
@@ -28,21 +28,21 @@ public class AdminFirebase {
         });
     }
 
-    public static void RecuperarUsuario(String UID){
+    public static void RecuperarUsuario(String UID, final FirebaseCallback callback){
         DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(UID);
         usuarioRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("Import", "entra");
 
                 if (dataSnapshot.exists()) {
-
                     Usuario.setSingleton(dataSnapshot.getValue(Usuario.class));
+                    callback.onCallback();
                 }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.e("FirebaseError", "Error al obtener datos del usuario: " + databaseError.getMessage());
+                callback.onFailure(databaseError.toException());
             }
         });
     }

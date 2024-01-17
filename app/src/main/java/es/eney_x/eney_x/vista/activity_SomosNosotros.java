@@ -1,4 +1,4 @@
-package es.eney_x.eney_x;
+package es.eney_x.eney_x.vista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import es.eney_x.eney_x.R;
 
 public class activity_SomosNosotros extends AppCompatActivity {
 

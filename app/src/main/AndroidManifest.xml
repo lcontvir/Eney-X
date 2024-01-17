@@ -13,34 +13,34 @@
         android:theme="@style/Theme.EneyX"
         tools:targetApi="31">
         <activity
-            android:name=".activity_componente_main"
+            android:name=".vista.activity_componente_main"
             android:exported="false" />
         <activity
-            android:name=".activity_componente_unico"
+            android:name=".vista.activity_componente_unico"
             android:exported="false" />
         <activity
-            android:name=".activity_login"
+            android:name=".vista.activity_login"
             android:exported="false" />
         <activity
-            android:name=".activity_SomosNosotros"
+            android:name=".vista.activity_SomosNosotros"
             android:exported="false" />
         <activity
-            android:name=".activity_inicio_eney"
+            android:name=".vista.activity_inicio_eney"
             android:exported="false" />
         <activity
-            android:name=".activity_perfilUsuario"
+            android:name=".vista.activity_perfilUsuario"
             android:exported="false" />
         <activity
-            android:name=".activity_CheckIn"
+            android:name=".vista.activity_CheckIn"
             android:exported="false" />
         <activity
-            android:name=".activity_Ajustes"
+            android:name=".vista.activity_Ajustes"
             android:exported="false" />
         <activity
-            android:name=".activity_register"
+            android:name=".vista.activity_register"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".vista.MainActivity"
             android:exported="true" >
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

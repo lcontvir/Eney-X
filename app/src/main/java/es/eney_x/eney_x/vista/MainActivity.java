@@ -1,4 +1,4 @@
-package es.eney_x.eney_x;
+package es.eney_x.eney_x.vista;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,13 +15,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+import es.eney_x.eney_x.controlador.AdminFirebase;
+import es.eney_x.eney_x.controlador.FirebaseCallback;
+import es.eney_x.eney_x.R;
+import es.eney_x.eney_x.modelo.Usuario;
+
+public class MainActivity extends AppCompatActivity implements FirebaseCallback {
 
     private FirebaseAuth mAuth;
     private DatabaseReference databaseReference;
@@ -88,20 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void RecuperarUsuario(String UID){
-        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(UID);
-        usuarioRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    Usuario.setSingleton(dataSnapshot.getValue(Usuario.class));
-                    LogIn();
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("FirebaseError", "Error al obtener datos del usuario: " + databaseError.getMessage());
-            }
-        });
+        AdminFirebase.RecuperarUsuario(UID, this);
     }
 
     public void RegistrarUsuario(){
@@ -122,5 +112,15 @@ public class MainActivity extends AppCompatActivity {
     public void LogIn(){
         Intent intent = new Intent(this, activity_perfilUsuario.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onCallback() {
+        LogIn();
+    }
+
+    @Override
+    public void onFailure(Exception e) {
+
     }
 }

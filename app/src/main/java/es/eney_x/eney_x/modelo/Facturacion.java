@@ -1,4 +1,4 @@
-package es.eney_x.eney_x;
+package es.eney_x.eney_x.modelo;
 
 import java.util.ArrayList;
 
