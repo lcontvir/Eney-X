@@ -3,6 +3,7 @@ package es.eney_x.eney_x.controlador;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -14,45 +15,76 @@ import es.eney_x.eney_x.modelo.Usuario;
 
 public class AdminFirebase {
 
-    public static void writeDataToFirebase() {
-        // Puedes cambiar 'test' por el nombre de un nodo en tu base de datos
-        FirebaseDatabase.getInstance().getReference().child("test").setValue("Hello, Firebase!", new DatabaseReference.CompletionListener() {
-            @Override
-            public void onComplete(@NonNull DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                if (databaseError == null) {
-                    Log.d("Firebase", "Conexión exitosa");
-                } else {
-                    Log.e("Firebase", "Error al conectar a la base de datos: " + databaseError.getMessage());
-                }
-            }
-        });
-    }
-
-    public static void RecuperarUsuario(String UID, final FirebaseCallback callback){
-        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(UID);
+    public static void RecuperarUsuario(final FirebaseCallback callback){
+        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@")));
         usuarioRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 if (dataSnapshot.exists()) {
                     Usuario.setSingleton(dataSnapshot.getValue(Usuario.class));
-                    callback.onCallback();
+                    callback.onRecover();
                 }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.e("FirebaseError", "Error al obtener datos del usuario: " + databaseError.getMessage());
-                callback.onFailure(databaseError.toException());
+                callback.onFail(databaseError.toException());
             }
         });
     }
 
-    public static boolean ActualizarUsuario(String UID){
-        return false;
+    public static void ActualizarUsuario(final FirebaseCallback callback){
+        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@")));
+        usuarioRef.setValue(Usuario.getInstance(), new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference ref) {
+                if (databaseError != null) {
+                    Log.e("Firebase", "Error al actualizar el registro: " + databaseError.getMessage());
+                    callback.onFail(databaseError.toException());
+                } else {
+                    Log.d("Firebase", "Registro actualizado correctamente.");
+                    callback.onSucceed();
+                }
+            }
+        });
     }
 
-    public static boolean AltaUsuario(String UID){
-        return false;
+    public static void AltaUsuario(final FirebaseCallback callback){
+        DatabaseReference BBDD = FirebaseDatabase.getInstance().getReference();
+        BBDD.child(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@"))).setValue(Usuario.getInstance(), new DatabaseReference.CompletionListener() {
+            @Override
+            public void onComplete(@NonNull DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
+                if (databaseError == null) {
+                    Log.d("Firebase", "Usuario dado de alta");
+                    callback.onRegister();
+                } else {
+                    Log.e("Firebase", "Error al conectar a la base de datos: " + databaseError.getMessage());
+                    callback.onFail(databaseError.toException());
+                }
+            }
+        });
     }
 
+    public static void ComprobarExistenciaUsuario(final FirebaseCallback callback){
+        FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.hasChild(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@")))) {
+                    callback.onSucceed();
+                    Log.d("Firebase", "Identificador encontrado en la base de datos.");
+                } else {
+                   callback.onNotFound();
+                    Log.d("Firebase", "Identificador no encontrado en la base de datos.");
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Maneja el error si ocurre.
+                Log.e("Firebase", "Error al leer datos: " + databaseError.getMessage());
+                callback.onFail(databaseError.toException());
+            }
+        });
+    }
 }

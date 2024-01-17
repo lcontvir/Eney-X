@@ -26,38 +26,10 @@ import es.eney_x.eney_x.modelo.Usuario;
 
 public class MainActivity extends AppCompatActivity implements FirebaseCallback {
 
-    private FirebaseAuth mAuth;
-    private DatabaseReference databaseReference;
     private EditText etNombre, etCorreoRegistro, etCorreoInicioSesion;
 
     private Button btnRegistrarse, btnIniciarSesion;
     private Usuario user;
-
- // Implementar esto a posteriori
-    private void iniciarSesion(String correo, String contraseña) {
-        mAuth.signInWithEmailAndPassword(correo, contraseña)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // El inicio de sesión fue exitoso
-                            Toast.makeText(MainActivity.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-
-                            // Aquí puedes realizar acciones adicionales después del inicio de sesión
-                        } else {
-                            // Si el inicio de sesión falla, muestra un mensaje al usuario.
-                            Toast.makeText(MainActivity.this, "Inicio de sesión fallido", Toast.LENGTH_SHORT).show();
-
-                            // También puedes obtener información detallada sobre el error
-                            Exception exception = task.getException();
-                            if (exception != null) {
-                                Log.e("FirebaseAuth", "Error: " + exception.getMessage());
-                            }
-                        }
-                    }
-                });
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,28 +57,20 @@ public class MainActivity extends AppCompatActivity implements FirebaseCallback 
         btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RecuperarUsuario(etCorreoInicioSesion.getText().toString().substring(0, etCorreoInicioSesion.getText().toString().indexOf("@")));
+                user.setNombre(etNombre.getText().toString());
+                user.setCorreo(etCorreoRegistro.getText().toString());
+                RecuperarUsuario();
             }
         });
     }
 
-    public void RecuperarUsuario(String UID){
-        AdminFirebase.RecuperarUsuario(UID, this);
+    public void RecuperarUsuario(){
+        AdminFirebase.RecuperarUsuario(this);
     }
 
     public void RegistrarUsuario(){
-        DatabaseReference BBDD = FirebaseDatabase.getInstance().getReference();
-        BBDD.child(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@"))).setValue(Usuario.getInstance(), new DatabaseReference.CompletionListener() {
-            @Override
-            public void onComplete(@NonNull DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                if (databaseError == null) {
-                    Log.d("Firebase", "Conexión exitosa");
-                    Toast.makeText(MainActivity.this, "Usuario Registrado", Toast.LENGTH_SHORT).show();
-                } else {
-                    Log.e("Firebase", "Error al conectar a la base de datos: " + databaseError.getMessage());
-                }
-            }
-        });
+        AdminFirebase.ComprobarExistenciaUsuario(this);
+        AdminFirebase.AltaUsuario(this);
     }
 
     public void LogIn(){
@@ -115,12 +79,27 @@ public class MainActivity extends AppCompatActivity implements FirebaseCallback 
     }
 
     @Override
-    public void onCallback() {
+    public void onSucceed() {
         LogIn();
     }
 
     @Override
-    public void onFailure(Exception e) {
+    public void onFail(Exception e) {
+
+    }
+
+    @Override
+    public void onRecover() {
+
+    }
+
+    @Override
+    public void onNotFound() {
+
+    }
+
+    @Override
+    public void onRegister() {
 
     }
 }
