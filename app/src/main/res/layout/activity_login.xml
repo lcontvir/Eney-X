@@ -31,8 +31,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="212dp"
         android:layout_marginEnd="50dp"
+        android:hint='Correo Electronico'
         android:inputType="text|textEmailAddress|textAutoComplete"
-        android:text='Correo Electronico'
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,8 +46,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="284dp"
         android:layout_marginEnd="51dp"
+        android:hint="********"
         android:inputType="text|textPassword"
-        android:text="********"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -193,6 +193,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logoeneyx" />
+
+    <TextView
+        android:id="@+id/tv_usernotfound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="86dp"
+        android:text="No hay ninguna cuenta con ese correo"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

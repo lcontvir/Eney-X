@@ -109,4 +109,8 @@ public class Usuario {
     public void setPrivacidad(Privacidad privacidad) {
         this.privacidad = privacidad;
     }
+
+    public String ObtenerIdentificador(){
+        return this.getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@"));
+    }
 }
