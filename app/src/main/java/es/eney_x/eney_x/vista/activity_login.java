@@ -3,9 +3,7 @@ package es.eney_x.eney_x.vista;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -24,40 +22,43 @@ import es.eney_x.eney_x.modelo.Usuario;
 
 public class activity_login extends AppCompatActivity implements FirebaseCallback {
 
+    protected Button go_to_register;
+    protected Button login_user;
+    protected EditText correo;
+    protected EditText contraseña;
+    protected TextView usuario_no_encontrado;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button go_to_register = findViewById(R.id.BttonRegistrarme);
-        Button go_to_mainplace = findViewById(R.id.BttonRegister);
+        go_to_register = findViewById(R.id.BttonGoToRegistrarme);
+        login_user = findViewById(R.id.BttonLogMeIn);
 
-        EditText correo = findViewById(R.id.EtMail);
-        EditText contraseña = findViewById(R.id.EtPassw);
+        correo = findViewById(R.id.EtMail);
+        contraseña = findViewById(R.id.EtPassw);
 
-        TextView usuario_no_encontrado = findViewById(R.id.tv_usernotfound);
+        usuario_no_encontrado = findViewById(R.id.tv_usernotfound);
         usuario_no_encontrado.setVisibility(View.GONE);
 
         correo.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                //No hace falta implementarlo
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                TextView usuario_no_encontrado = findViewById(R.id.tv_usernotfound);
                 usuario_no_encontrado.setVisibility(View.GONE);
-                Button go_to_mainplace = findViewById(R.id.BttonRegister);
-                go_to_mainplace.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
+                login_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                //No hace falta implementarlo
             }
         });
-
 
         go_to_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +68,7 @@ public class activity_login extends AppCompatActivity implements FirebaseCallbac
                 finish();
             }
         });
-        go_to_mainplace.setOnClickListener(new View.OnClickListener() {
+        login_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Usuario usuario = Usuario.getInstance();
@@ -78,19 +79,15 @@ public class activity_login extends AppCompatActivity implements FirebaseCallbac
         });
     }
 
-    public boolean ValidateEmail(String email){
-        final String EMAIL_PATTERN =
-                "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-        final Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+    public boolean ValidateEmail(String email) {
+        final Pattern pattern = Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
 
-    public void LoginUsuario(){
+    public void LoginUsuario() {
         AdminFirebase.ComprobarExistenciaUsuario(this);
-        Button go_to_mainplace = findViewById(R.id.BttonRegister);
-        go_to_mainplace.setText("Iniciando Sesion");
-
+        login_user.setText("Iniciando Sesion");
     }
 
     @Override
@@ -112,15 +109,13 @@ public class activity_login extends AppCompatActivity implements FirebaseCallbac
 
     @Override
     public void onNotFound() {
-        TextView usuario_no_encontrado = findViewById(R.id.tv_usernotfound);
         usuario_no_encontrado.setVisibility(View.VISIBLE);
-        Button go_to_mainplace = findViewById(R.id.BttonRegister);
-        go_to_mainplace.setBackgroundColor(Color.rgb(217, 17, 37));
-        go_to_mainplace.setText("Iniciar Sesion");
+        login_user.setBackgroundColor(Color.rgb(217, 17, 37));
+        login_user.setText("Iniciar Sesion");
     }
 
     @Override
     public void onRegister() {
-
+        //No hace falta implementarlo
     }
 }

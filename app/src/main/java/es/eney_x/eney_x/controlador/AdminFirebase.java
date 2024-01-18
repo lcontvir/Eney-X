@@ -16,7 +16,7 @@ import es.eney_x.eney_x.modelo.Usuario;
 public class AdminFirebase {
 
     public static void RecuperarUsuario(final FirebaseCallback callback){
-        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@")));
+        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().getCorreo());
         usuarioRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -35,7 +35,7 @@ public class AdminFirebase {
     }
 
     public static void ActualizarUsuario(final FirebaseCallback callback){
-        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@")));
+        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().getCorreo());
         usuarioRef.setValue(Usuario.getInstance(), new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference ref) {
@@ -52,7 +52,8 @@ public class AdminFirebase {
 
     public static void AltaUsuario(final FirebaseCallback callback){
         DatabaseReference BBDD = FirebaseDatabase.getInstance().getReference();
-        BBDD.child(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@"))).setValue(Usuario.getInstance(), new DatabaseReference.CompletionListener() {
+        Usuario usuario = Usuario.getInstance();
+        BBDD.child(usuario.getCorreo()).setValue(usuario, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@NonNull DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 if (databaseError == null) {
@@ -70,7 +71,7 @@ public class AdminFirebase {
         FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.hasChild(Usuario.getInstance().getCorreo().substring(0, Usuario.getInstance().getCorreo().indexOf("@")))) {
+                if (dataSnapshot.hasChild(Usuario.getInstance().getCorreo())){
                     callback.onSucceed();
                     Log.d("Firebase", "Identificador encontrado en la base de datos.");
                 } else {

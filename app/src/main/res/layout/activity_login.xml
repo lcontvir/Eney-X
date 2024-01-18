@@ -54,7 +54,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/BttonRegister"
+        android:id="@+id/BttonLogMeIn"
         android:layout_width="358dp"
         android:layout_height="70dp"
         android:layout_marginStart="27dp"
@@ -81,7 +81,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/logogoogle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonLogMeIn" />
 
     <ImageButton
         android:id="@+id/FacebookButton"
@@ -99,10 +99,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/GoogleButton"
-        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonLogMeIn" />
 
     <Button
-        android:id="@+id/BttonRegistrarme"
+        android:id="@+id/BttonGoToRegistrarme"
         android:layout_width="130dp"
         android:layout_height="39dp"
         android:layout_marginStart="2dp"
@@ -114,7 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toEndOf="@+id/TvTienesCuenta"
-        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonLogMeIn" />
 
     <TextView
         android:id="@+id/TvTienesCuenta"
@@ -125,7 +125,7 @@
         android:layout_marginTop="224dp"
         android:text="No tienes cuenta?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonLogMeIn" />
 
     <TextView
         android:id="@+id/TvO"
@@ -140,7 +140,7 @@
         app:layout_constraintEnd_toStartOf="@+id/VBarraDerech"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toEndOf="@+id/VBarraIzq"
-        app:layout_constraintTop_toBottomOf="@+id/BttonRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/BttonLogMeIn" />
 
     <View
         android:id="@+id/VBarraIzq"
@@ -152,7 +152,7 @@
         android:background="@drawable/barra_redondeada_registro_y_login"
         app:layout_constraintBottom_toTopOf="@+id/GoogleButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BttonRegister"
+        app:layout_constraintTop_toBottomOf="@+id/BttonLogMeIn"
         app:layout_constraintVertical_bias="0.592" />
 
     <View
@@ -165,7 +165,7 @@
         android:background="@drawable/barra_redondeada_registro_y_login"
         app:layout_constraintBottom_toTopOf="@+id/FacebookButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BttonRegister"
+        app:layout_constraintTop_toBottomOf="@+id/BttonLogMeIn"
         app:layout_constraintVertical_bias="0.551" />
 
     <TextView
