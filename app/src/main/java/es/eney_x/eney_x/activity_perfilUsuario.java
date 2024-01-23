@@ -68,8 +68,9 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_Ajustes.class);
-
+                Intent intent = new Intent(activity_perfilUsuario.this, Activity_datos.class);
+                // Pasa el texto como extra
+                intent.putExtra("textolicencia", "      Licencias  ");
                 startActivity(intent);
                 finish();
             }
@@ -78,7 +79,7 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_Ajustes.class);
+                Intent intent = new Intent(activity_perfilUsuario.this, activity_datosFacturacion.class);
 
                 startActivity(intent);
                 finish();
@@ -89,8 +90,10 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_Ajustes.class);
+                Intent intent = new Intent(activity_perfilUsuario.this, Activity_datos.class);
 
+                // Pasa el texto como extra
+                intent.putExtra("textolicencia", "      Privacidad  ");
                 startActivity(intent);
                 finish();
             }
@@ -100,8 +103,10 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_Ajustes.class);
+                Intent intent = new Intent(activity_perfilUsuario.this, Activity_datos.class);
 
+                // Pasa el texto como extra
+                intent.putExtra("textolicencia", "     Dispositivos  ");
                 startActivity(intent);
                 finish();
             }

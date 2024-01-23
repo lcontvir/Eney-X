@@ -1,4 +1,6 @@
 package es.eney_x.eney_x;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Usuario {
 
@@ -6,7 +8,7 @@ public class Usuario {
 
     private String Nombre = "";
     private String Correo = "";
-
+    private List<Licencias> licenciasList = new ArrayList<>();
     private Usuario() {
     }
 
@@ -31,5 +33,12 @@ public class Usuario {
 
     public void setCorreo(String correo) {
         Correo = correo;
+    }
+    public List<Licencias> getLicenciasList() {
+        return licenciasList;
+    }
+
+    public void setLicenciasList(List<Licencias> licenciasList) {
+        this.licenciasList = licenciasList;
     }
 }

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.EneyX"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_datosFacturacionEspecifico"
+            android:exported="false" />
+        <activity
+            android:name=".item_lista"
+            android:exported="false" />
+        <activity
+            android:name=".activity_datosFacturacion"
+            android:exported="false" />
+        <activity
+            android:name=".activity_register"
+            android:exported="false" />
+        <activity
             android:name=".activity_componente_main"
             android:exported="false" />
         <activity
@@ -28,7 +40,7 @@
             android:name=".activity_inicio_eney"
             android:exported="false" />
         <activity
-            android:name=".activity_perfilUsuario"
+            android:name=".Activity_datos"
             android:exported="false" />
         <activity
             android:name=".activity_CheckIn"
@@ -40,10 +52,11 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_register"
-            android:exported="true" >
-        <intent-filter>
+            android:name=".activity_perfilUsuario"
+            android:exported="true">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
