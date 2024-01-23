@@ -13,37 +13,47 @@
         android:theme="@style/Theme.EneyX"
         tools:targetApi="31">
         <activity
-            android:name=".vista.activity_componente_main"
+            android:name=".modelo.Item_lista"
             android:exported="false" />
         <activity
-            android:name=".vista.activity_componente_unico"
+            android:name=".modelo.Activity_datos"
             android:exported="false" />
         <activity
-            android:name=".vista.activity_login"
+            android:name=".modelo.Activity_datosFacturacion"
             android:exported="false" />
         <activity
-            android:name=".vista.activity_SomosNosotros"
+            android:name=".vista.Activity_componente_main"
             android:exported="false" />
         <activity
-            android:name=".vista.activity_inicio_eney"
+            android:name=".vista.Activity_componente_unico"
             android:exported="false" />
         <activity
-            android:name=".vista.activity_perfilUsuario"
+            android:name=".vista.Activity_login"
             android:exported="false" />
         <activity
-            android:name=".vista.activity_CheckIn"
+            android:name=".vista.Activity_somos_nosotros"
             android:exported="false" />
         <activity
-            android:name=".vista.activity_Ajustes"
+            android:name=".vista.Activity_inicio"
+            android:exported="false" />
+        <activity
+            android:name=".vista.Activity_perfilUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".vista.Activity_checkin"
+            android:exported="false" />
+        <activity
+            android:name=".vista.Activity_ajustes"
             android:exported="false" />
         <activity
             android:name=".vista.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".vista.activity_register"
+            android:name=".vista.Activity_register"
             android:exported="true" >
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

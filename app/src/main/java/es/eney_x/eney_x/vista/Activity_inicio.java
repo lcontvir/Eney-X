@@ -8,7 +8,7 @@ import android.os.Handler;
 
 import es.eney_x.eney_x.R;
 
-public class activity_inicio_eney extends AppCompatActivity {
+public class Activity_inicio extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class activity_inicio_eney extends AppCompatActivity {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(activity_inicio_eney.this, activity_CheckIn.class);
+                Intent intent = new Intent(Activity_inicio.this, Activity_checkin.class);
                 startActivity(intent);
                 finish();
             }

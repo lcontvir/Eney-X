@@ -9,9 +9,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import es.eney_x.eney_x.R;
+import es.eney_x.eney_x.modelo.Activity_datos;
 import es.eney_x.eney_x.modelo.Usuario;
+import es.eney_x.eney_x.modelo.Activity_datosFacturacion;
 
-public class activity_perfilUsuario extends AppCompatActivity{
+public class Activity_perfilUsuario extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,7 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_perfilUsuario.class);
+                Intent intent = new Intent(Activity_perfilUsuario.this, Activity_perfilUsuario.class);
 
                 startActivity(intent);
                 finish();
@@ -49,7 +51,7 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_componente_main.class);
+                Intent intent = new Intent(Activity_perfilUsuario.this, Activity_componente_main.class);
 
                 startActivity(intent);
                 finish();
@@ -60,7 +62,7 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_CheckIn.class);
+                Intent intent = new Intent(Activity_perfilUsuario.this, Activity_checkin.class);
 
                 startActivity(intent);
                 finish();
@@ -71,8 +73,9 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_Ajustes.class);
-
+                Intent intent = new Intent(Activity_perfilUsuario.this, Activity_datos.class);
+                // Pasa el texto como extra
+                intent.putExtra("textolicencia", "      Licencias  ");
                 startActivity(intent);
                 finish();
             }
@@ -81,7 +84,7 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_Ajustes.class);
+                Intent intent = new Intent(Activity_perfilUsuario.this, Activity_datosFacturacion.class);
 
                 startActivity(intent);
                 finish();
@@ -92,8 +95,10 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_Ajustes.class);
+                Intent intent = new Intent(Activity_perfilUsuario.this, Activity_datos.class);
 
+                // Pasa el texto como extra
+                intent.putExtra("textolicencia", "      Privacidad  ");
                 startActivity(intent);
                 finish();
             }
@@ -103,8 +108,10 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_Ajustes.class);
+                Intent intent = new Intent(Activity_perfilUsuario.this, Activity_datos.class);
 
+                // Pasa el texto como extra
+                intent.putExtra("textolicencia", "     Dispositivos  ");
                 startActivity(intent);
                 finish();
             }
@@ -114,7 +121,7 @@ public class activity_perfilUsuario extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_perfilUsuario.this, activity_SomosNosotros.class);
+                Intent intent = new Intent(Activity_perfilUsuario.this, Activity_somos_nosotros.class);
 
                 startActivity(intent);
                 finish();

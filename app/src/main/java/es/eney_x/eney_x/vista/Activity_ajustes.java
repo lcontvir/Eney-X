@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 
 import es.eney_x.eney_x.R;
 
-public class activity_Ajustes extends AppCompatActivity {
+public class Activity_ajustes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class activity_Ajustes extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_Ajustes.this, activity_perfilUsuario.class);
+                Intent intent = new Intent(Activity_ajustes.this, Activity_perfilUsuario.class);
                 startActivity(intent);
                 finish();
             }

@@ -109,4 +109,9 @@ public class Usuario {
     public void setPrivacidad(Privacidad privacidad) {
         this.privacidad = privacidad;
     }
+
+    public String RecuperarIdentificador(){
+        int indiceArroba = this.correo.indexOf('@');
+        return this.correo.substring(0, indiceArroba);
+    }
 }

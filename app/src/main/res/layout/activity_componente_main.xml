@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".vista.activity_componente_main">
+    tools:context=".vista.Activity_componente_main">
 
 
     <View
@@ -148,12 +148,12 @@
                         android:textColor="#85FFFFFF"
                         android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/lugaresfav"
+                        app:layout_constraintStart_toStartOf="@+id/tvinfo4"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.031" />
 
                     <TextView
-                        android:id="@+id/lugaresfav"
+                        android:id="@+id/tvinfo4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -173,7 +173,7 @@
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/lugaresfav"
+                        app:layout_constraintTop_toBottomOf="@+id/tvinfo4"
                         app:layout_constraintVertical_bias="0.15">
 
                         <TextView
@@ -246,7 +246,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/lugarescolores"
-                        app:layout_constraintTop_toTopOf="@+id/lugaresfav"
+                        app:layout_constraintTop_toTopOf="@+id/tvinfo4"
                         app:layout_constraintVertical_bias="0.0" />
 
                     <Button
@@ -310,7 +310,7 @@
                     app:srcCompat="@drawable/circulonaranja" />
 
                 <TextView
-                    android:id="@+id/protector_red_local"
+                    android:id="@+id/tvinfo1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Protector red local"
@@ -327,8 +327,8 @@
                     android:layout_height="74dp"
                     android:layout_marginTop="12dp"
                     android:orientation="vertical"
-                    app:layout_constraintStart_toStartOf="@+id/protector_red_local"
-                    app:layout_constraintTop_toBottomOf="@+id/protector_red_local">
+                    app:layout_constraintStart_toStartOf="@+id/tvinfo1"
+                    app:layout_constraintTop_toBottomOf="@+id/tvinfo1">
 
 
                     <LinearLayout
@@ -346,7 +346,7 @@
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/info_direccion_ip"
+                            android:id="@+id/tvinfo2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -369,7 +369,7 @@
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/info_conexiones_cerradas"
+                            android:id="@+id/tvinfo3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -392,7 +392,7 @@
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/info_alertas"
+                            android:id="@+id/tvinfo4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

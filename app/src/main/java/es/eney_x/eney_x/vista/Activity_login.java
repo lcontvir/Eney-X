@@ -20,7 +20,7 @@ import es.eney_x.eney_x.controlador.AdminFirebase;
 import es.eney_x.eney_x.controlador.FirebaseCallback;
 import es.eney_x.eney_x.modelo.Usuario;
 
-public class activity_login extends AppCompatActivity implements FirebaseCallback {
+public class Activity_login extends AppCompatActivity implements FirebaseCallback {
 
     protected Button go_to_register;
     protected Button login_user;
@@ -63,7 +63,7 @@ public class activity_login extends AppCompatActivity implements FirebaseCallbac
         go_to_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity_login.this, activity_register.class);
+                Intent intent = new Intent(Activity_login.this, Activity_register.class);
                 startActivity(intent);
                 finish();
             }
@@ -102,7 +102,7 @@ public class activity_login extends AppCompatActivity implements FirebaseCallbac
 
     @Override
     public void onRecover() {
-        Intent intent = new Intent(activity_login.this, activity_CheckIn.class);
+        Intent intent = new Intent(Activity_login.this, Activity_checkin.class);
         startActivity(intent);
         finish();
     }

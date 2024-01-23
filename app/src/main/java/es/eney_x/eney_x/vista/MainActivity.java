@@ -2,22 +2,11 @@ package es.eney_x.eney_x.vista;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import es.eney_x.eney_x.controlador.AdminFirebase;
 import es.eney_x.eney_x.controlador.FirebaseCallback;
@@ -74,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements FirebaseCallback 
     }
 
     public void LogIn(){
-        Intent intent = new Intent(this, activity_perfilUsuario.class);
+        Intent intent = new Intent(this, Activity_perfilUsuario.class);
         startActivity(intent);
     }
 

@@ -3,8 +3,6 @@ package es.eney_x.eney_x.vista;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.BlendMode;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -23,7 +21,7 @@ import es.eney_x.eney_x.controlador.AdminFirebase;
 import es.eney_x.eney_x.controlador.FirebaseCallback;
 import es.eney_x.eney_x.modelo.Usuario;
 
-public class activity_register extends AppCompatActivity implements FirebaseCallback {
+public class Activity_register extends AppCompatActivity implements FirebaseCallback {
 
     protected Button go_to_login;
     protected Button register_user;
@@ -53,7 +51,7 @@ public class activity_register extends AppCompatActivity implements FirebaseCall
         go_to_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity_register.this, activity_login.class);
+                Intent intent = new Intent(Activity_register.this, Activity_login.class);
                 startActivity(intent);
                 finish();
             }
@@ -308,7 +306,7 @@ public class activity_register extends AppCompatActivity implements FirebaseCall
 
     @Override
     public void onRegister() {
-        Intent intent = new Intent(activity_register.this, activity_CheckIn.class);
+        Intent intent = new Intent(Activity_register.this, Activity_checkin.class);
         startActivity(intent);
         finish();
     }

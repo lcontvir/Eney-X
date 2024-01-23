@@ -3,6 +3,8 @@
     <color name="Blanco">#FFFF</color>
     <color name="colorFondo">#252627</color>
     <color name="botonVerde">#44C154</color>
+    <color name="azul">#44C1B2</color>
+    <color name="rojo">#C14444</color>
     <color name="black">#FF000000</color>
     <color name="texto">#FFFFFF</color>
     <color name="white">#FFFFFFFF</color>

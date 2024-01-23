@@ -9,22 +9,37 @@ import android.widget.ImageButton;
 
 import es.eney_x.eney_x.R;
 
-public class activity_CheckIn extends AppCompatActivity {
+public class Activity_somos_nosotros extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_in);
+        setContentView(R.layout.activity_somos_nosotros);
 
+        ImageButton volver = findViewById(R.id.IbVolver);
         ImageButton Ajustes = findViewById(R.id.botonAjustes);
         ImageButton Home = findViewById(R.id.botonCasa);
         ImageButton Seguridad = findViewById(R.id.botonEscudo);
 
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+
+                Intent intent = new Intent(Activity_somos_nosotros.this, Activity_perfilUsuario.class);
+
+                startActivity(intent);
+                finish();
+            }
+
+
+        });
         Ajustes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Al hacer clic en el bot贸n, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_CheckIn.this, activity_perfilUsuario.class);
+                // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+                Intent intent = new Intent(Activity_somos_nosotros.this, Activity_ajustes.class);
 
                 startActivity(intent);
                 finish();
@@ -33,8 +48,8 @@ public class activity_CheckIn extends AppCompatActivity {
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Al hacer clic en el bot贸n, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_CheckIn.this, activity_componente_main.class);
+                // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+                Intent intent = new Intent(Activity_somos_nosotros.this, Activity_componente_main.class);
 
                 startActivity(intent);
                 finish();
@@ -44,8 +59,8 @@ public class activity_CheckIn extends AppCompatActivity {
         Seguridad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Al hacer clic en el bot贸n, crea un intent para volver a la actividad anterior
-                Intent intent = new Intent(activity_CheckIn.this, activity_CheckIn.class);
+                // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+                Intent intent = new Intent(Activity_somos_nosotros.this, Activity_checkin.class);
 
                 startActivity(intent);
                 finish();

@@ -13,7 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import es.eney_x.eney_x.R;
 
-public class activity_componente_main extends AppCompatActivity {
+public class Activity_componente_main extends AppCompatActivity {
 
     ImageView casa, escudo, ajustes, logo;
     ConstraintLayout constraintLayoutPadre, constraintLayoutHijo;
@@ -32,7 +32,7 @@ public class activity_componente_main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(activity_componente_main.this, activity_componente_unico.class);
+                Intent intent = new Intent(Activity_componente_main.this, Activity_componente_unico.class);
                 startActivity(intent);
                 finish();
             }
@@ -44,7 +44,7 @@ public class activity_componente_main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(activity_componente_main.this, activity_perfilUsuario.class);
+                Intent intent = new Intent(Activity_componente_main.this, Activity_perfilUsuario.class);
                 startActivity(intent);
                 finish();
             }
@@ -55,7 +55,7 @@ public class activity_componente_main extends AppCompatActivity {
         escudoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_componente_main.this, activity_CheckIn.class);
+                Intent intent = new Intent(Activity_componente_main.this, Activity_checkin.class);
                 startActivity(intent);
                 finish();
 
@@ -68,7 +68,7 @@ public class activity_componente_main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(activity_componente_main.this, activity_componente_main.class);
+                Intent intent = new Intent(Activity_componente_main.this, Activity_componente_main.class);
                 startActivity(intent);
                 finish();
             }

@@ -16,7 +16,7 @@ import es.eney_x.eney_x.modelo.Usuario;
 public class AdminFirebase {
 
     public static void RecuperarUsuario(final FirebaseCallback callback){
-        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().getCorreo());
+        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().RecuperarIdentificador());
         usuarioRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -35,7 +35,7 @@ public class AdminFirebase {
     }
 
     public static void ActualizarUsuario(final FirebaseCallback callback){
-        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().getCorreo());
+        DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().RecuperarIdentificador());
         usuarioRef.setValue(Usuario.getInstance(), new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference ref) {
@@ -53,7 +53,7 @@ public class AdminFirebase {
     public static void AltaUsuario(final FirebaseCallback callback){
         DatabaseReference BBDD = FirebaseDatabase.getInstance().getReference();
         Usuario usuario = Usuario.getInstance();
-        BBDD.child(usuario.getCorreo()).setValue(usuario, new DatabaseReference.CompletionListener() {
+        BBDD.child(usuario.RecuperarIdentificador()).setValue(usuario, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@NonNull DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 if (databaseError == null) {
@@ -71,7 +71,7 @@ public class AdminFirebase {
         FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.hasChild(Usuario.getInstance().getCorreo())){
+                if (dataSnapshot.hasChild(Usuario.getInstance().RecuperarIdentificador())){
                     callback.onSucceed();
                     Log.d("Firebase", "Identificador encontrado en la base de datos.");
                 } else {

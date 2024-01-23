@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".vista.activity_componente_unico">
+    tools:context=".vista.Activity_componente_unico">
 
     <TextView
         android:id="@+id/vpn_arriba"

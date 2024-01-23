@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import es.eney_x.eney_x.R;
 
-public class activity_componente_unico extends AppCompatActivity {
+public class Activity_componente_unico extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class activity_componente_unico extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Define la nueva actividad que quieres abrir (activity_componente_main)
-                Intent intent = new Intent(activity_componente_unico.this, activity_componente_main.class);
+                Intent intent = new Intent(Activity_componente_unico.this, Activity_componente_main.class);
 
                 // Inicia la nueva actividad y cierra la actual
                 startActivity(intent);
