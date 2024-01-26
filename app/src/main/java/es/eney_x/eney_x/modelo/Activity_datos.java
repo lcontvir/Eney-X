@@ -13,9 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.eney_x.eney_x.R;
+import es.eney_x.eney_x.controlador.AdminFirebase;
 import es.eney_x.eney_x.controlador.DispositivosAdaptador;
 import es.eney_x.eney_x.controlador.FacturacionFacturaAdaptador;
 import es.eney_x.eney_x.controlador.FacturacionMetodoPagoAdaptador;
+import es.eney_x.eney_x.controlador.FirebaseCallback;
 import es.eney_x.eney_x.controlador.LicenciasAdaptador;
 import es.eney_x.eney_x.controlador.PrivacidadAdaptador;
 import es.eney_x.eney_x.vista.*;
@@ -30,6 +32,7 @@ public class Activity_datos extends AppCompatActivity {
 
     private TextView textViewBoton;
     private ImageButton boton_atras;
+    FirebaseCallback firebaseCallback;
 
 
     @Override
@@ -42,23 +45,25 @@ public class Activity_datos extends AppCompatActivity {
         boton_atras = findViewById(R.id.atras);
 
         boton_atras.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                    Intent intent = new Intent(Activity_datos.this, Activity_perfilUsuario.class);
+            @Override
+            public void onClick(View view) {
+                // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+                Intent intent = new Intent(Activity_datos.this, Activity_perfilUsuario.class);
 
-                    startActivity(intent);
-                    finish();
-                }
-            });
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         if ("      Licencias  ".equals(textoLicencia)) {
-            List<Licencia> listaLicencias = new ArrayList<>();
-            listaLicencias.add(new Licencia("12/10/2024", "1234-5678-9012-3456", 13, 0));
-            listaLicencias.add(new Licencia("30/11/2024", "9876-5678-9012-3456", 8, 1));
-            listaLicencias.add(new Licencia("21/12/2024", "4567-5678-9012-3456", 5, 2));
 
+            List<Licencia> listaLicencias = new ArrayList<>();
+
+
+            for (Licencia licencia: Usuario.getInstance().getLicencias()){
+                listaLicencias.add(new Licencia(licencia.getCaducidad(), licencia.getClave_licencia(), licencia.getDispositivos_maximos(), licencia.getTipo_licencia()));
+            }
 
             recyclerView = findViewById(R.id.recyclerViw);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -68,9 +73,14 @@ public class Activity_datos extends AppCompatActivity {
         } else if ("     Dispositivos  ".equals(textoLicencia)) {
 
             List<Dispositivo> listaDispositivos = new ArrayList<>();
-            listaDispositivos.add(new Dispositivo(true, "Estándar", "Modelo profesional"));
-            listaDispositivos.add(new Dispositivo(false, "Avanzada", "Modelo Básico"));
-            listaDispositivos.add(new Dispositivo(true, "Básica", "Modelo profesional"));
+
+
+
+            for(Dispositivo dispositivo: Usuario.getInstance().getDispositivos()){
+                listaDispositivos.add(new Dispositivo(dispositivo.isActivo(), dispositivo.getLicencia(), dispositivo.getModelo()));
+            }
+
+
 
             recyclerView = findViewById(R.id.recyclerViw);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
