@@ -34,4 +34,9 @@
     <string name="info_componente">Info componente</string>
     <string name="sin_fallos">Funcionando sin fallos</string>
     <string name="lugar_fav">Lugares_favoritos</string>
+
+    <string name="privacidad_ubicacion">Ubicación</string>
+    <string name="privacidad_cookies">Cookies</string>
+    <string name="privacidad_notificaciones">Notificaciones</string>
+    <string name="privacidad_marketing">Marketing</string>
 </resources>

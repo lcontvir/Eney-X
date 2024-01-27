@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.eney_x.eney_x.R;
+import es.eney_x.eney_x.controlador.AdminFirebase;
 import es.eney_x.eney_x.controlador.DispositivosAdaptador;
 import es.eney_x.eney_x.controlador.FacturacionFacturaAdaptador;
 import es.eney_x.eney_x.controlador.FacturacionMetodoPagoAdaptador;
@@ -79,16 +80,16 @@ public class Activity_datos extends AppCompatActivity {
 
 
         } else if ("      Privacidad  ".equals(textoLicencia)) {
+
             List<Privacidad> listaPrivacidad = new ArrayList<>();
-            listaPrivacidad.add(new Privacidad(true, true, true, true));
-            listaPrivacidad.add(new Privacidad(true, false, true, false));
-            listaPrivacidad.add(new Privacidad(false, false, false, false));
+            listaPrivacidad.add(new Privacidad(Usuario.getInstance().getPrivacidad().isCookies_analiticas(), Usuario.getInstance().getPrivacidad().isCookies_marketing(), Usuario.getInstance().getPrivacidad().isNotificaciones_publicidad(), Usuario.getInstance().getPrivacidad().isUbicacion()));
 
 
             recyclerView = findViewById(R.id.recyclerViw);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             PrivacidadAdaptr = new PrivacidadAdaptador(this, listaPrivacidad,textoLicencia);
             recyclerView.setAdapter(PrivacidadAdaptr);
+
         }else if ("      Factura  ".equals(textoLicencia)) {
             List<Factura> listFacturacion = new ArrayList<>();
             listFacturacion.add(new Factura("Licencia Profesional"));

@@ -48,4 +48,6 @@ public class Privacidad {
     public void setUbicacion(boolean ubicacion) {
         this.ubicacion = ubicacion;
     }
+
+
 }
