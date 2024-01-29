@@ -40,7 +40,7 @@ public class PrivacidadAdaptador extends RecyclerView.Adapter<PrivacidadAdaptado
     @NonNull
     @Override
     public PrivacidadViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_lista, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_lista_privacidad, parent, false);
         return new PrivacidadViewHolder(view);
     }
 
