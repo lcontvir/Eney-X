@@ -215,7 +215,7 @@ public class PrivacidadAdaptador extends RecyclerView.Adapter<PrivacidadAdaptado
         public PrivacidadViewHolder(@NonNull View itemView) {
             super(itemView);
             enviar_privacidad = itemView.findViewById(R.id.enviar_privacidad);
-            tvUbicacion = itemView.findViewById(R.id.tvinfo4);
+            tvUbicacion = itemView.findViewById(R.id.tvinfo5);
             tvNotificaciones = itemView.findViewById(R.id.tvinfo1);
             tvGalletasAnaliticas = itemView.findViewById(R.id.tvinfo3);
             tvGalletasMarketing = itemView.findViewById(R.id.tvinfo2);
