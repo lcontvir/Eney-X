@@ -35,7 +35,8 @@ public class Activity_datos extends AppCompatActivity {
 
     private TextView textViewBoton;
     private ImageButton boton_atras;
-    private TextView textViewSaldo;
+    FirebaseCallback firebaseCallback;
+
 
 
     @Override
@@ -48,24 +49,28 @@ public class Activity_datos extends AppCompatActivity {
         boton_atras = findViewById(R.id.atras);
 
         boton_atras.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
-                    Intent intent = new Intent(Activity_datos.this, Activity_perfilUsuario.class);
+            @Override
+            public void onClick(View view) {
+                // Al hacer clic en el botón, crea un intent para volver a la actividad anterior
+                Intent intent = new Intent(Activity_datos.this, Activity_perfilUsuario.class);
 
-                    startActivity(intent);
-                    finish();
-                }
-            });
+                startActivity(intent);
+                finish();
+            }
+        });
 
         recyclerView = findViewById(R.id.recyclerViw);
 
         if ("      Licencias  ".equals(textoLicencia)) {
-            List<Licencia> listaLicencias = new ArrayList<>();
-            listaLicencias.add(new Licencia("12/10/2024", "1234-5678-9012-3456", 13, 0));
-            listaLicencias.add(new Licencia("30/11/2024", "9876-5678-9012-3456", 8, 1));
-            listaLicencias.add(new Licencia("21/12/2024", "4567-5678-9012-3456", 5, 2));
 
+            List<Licencia> listaLicencias = new ArrayList<>();
+
+
+            for (Licencia licencia: Usuario.getInstance().getLicencias()){
+                listaLicencias.add(new Licencia(licencia.getCaducidad(), licencia.getClave_licencia(), licencia.getDispositivos_maximos(), licencia.getTipo_licencia()));
+            }
+
+            recyclerView = findViewById(R.id.recyclerViw);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             LicenciaAdaptr = new LicenciasAdaptador(this, listaLicencias, textoLicencia);
             recyclerView.setAdapter(LicenciaAdaptr);
@@ -73,9 +78,14 @@ public class Activity_datos extends AppCompatActivity {
         } else if ("     Dispositivos  ".equals(textoLicencia)) {
 
             List<Dispositivo> listaDispositivos = new ArrayList<>();
-            listaDispositivos.add(new Dispositivo(true, "Estándar", "Modelo profesional"));
-            listaDispositivos.add(new Dispositivo(false, "Avanzada", "Modelo Básico"));
-            listaDispositivos.add(new Dispositivo(true, "Básica", "Modelo profesional"));
+
+
+
+            for(Dispositivo dispositivo: Usuario.getInstance().getDispositivos()){
+                listaDispositivos.add(new Dispositivo(dispositivo.isActivo(), dispositivo.getLicencia(), dispositivo.getModelo()));
+            }
+
+
 
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             DispositivosAdaptr = new DispositivosAdaptador(this, listaDispositivos,textoLicencia);
