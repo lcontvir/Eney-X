@@ -104,9 +104,8 @@
 
             <LinearLayout
                 android:id="@+id/lugarescolores"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:orientation="vertical"
@@ -114,34 +113,108 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
                 app:layout_constraintVertical_bias="0.15">
-                <TextView
-                    android:id="@+id/tvinfo5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textColor="@color/white" />
-                <TextView
-                    android:id="@+id/tvinfo1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textColor="@color/white" />
 
-                <TextView
-                    android:id="@+id/tvinfo2"
+                <LinearLayout
+                    android:id="@+id/linearhorizontal1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textColor="@color/white" />
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tvinfo3"
+                    <TextView
+                        android:id="@+id/tvubicacion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text=""
+                        android:textColor="@color/white" />
+
+                    <Switch
+                        android:id="@+id/swubicacion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearhorizontal2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textColor="@color/white" />
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:id="@+id/tvnotificaciones"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text=""
+                        android:textColor="@color/white" />
+
+                    <Switch
+                        android:id="@+id/swnotificaciones"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearhorizontal3"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvgalletasanaliticas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text=""
+                        android:textColor="@color/white" />
+
+                    <Switch
+                        android:id="@+id/swgalletasanaliticas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearhorizontal4"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvgalletasmarketing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text=""
+                        android:textColor="@color/white" />
+
+                    <Switch
+                        android:id="@+id/swgalletasmarketing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp" />
+                </LinearLayout>
             </LinearLayout>
+
 
             <Button
                 android:id="@+id/enviar_privacidad"
