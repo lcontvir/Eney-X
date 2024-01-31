@@ -92,10 +92,9 @@ public class Activity_datos extends AppCompatActivity {
             recyclerView.setAdapter(DispositivosAdaptr);
 
         } else if ("      Privacidad  ".equals(textoLicencia)) {
+
             List<Privacidad> listaPrivacidad = new ArrayList<>();
-            listaPrivacidad.add(new Privacidad(true, true, true, true));
-            listaPrivacidad.add(new Privacidad(true, false, true, false));
-            listaPrivacidad.add(new Privacidad(false, false, false, false));
+            listaPrivacidad.add(new Privacidad(Usuario.getInstance().getPrivacidad().isCookies_analiticas(), Usuario.getInstance().getPrivacidad().isCookies_marketing(), Usuario.getInstance().getPrivacidad().isNotificaciones_publicidad(), Usuario.getInstance().getPrivacidad().isUbicacion()));
 
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             PrivacidadAdaptr = new PrivacidadAdaptador(this, listaPrivacidad,textoLicencia);
