@@ -69,7 +69,5 @@ public class Activity_datosFacturacion extends AppCompatActivity {
                 btnsaldo.setText("Le quedan 115 euros por gastar");
             }
         });
-
-
     }
 }
