@@ -8,6 +8,7 @@ public class MetodoPago {
     private String tarjeta = "";
 
     public MetodoPago() {
+        // Aquí puedes inicializar cualquier atributo necesario
     }
 
     public MetodoPago(String caducidad, int csv, String nombre, String tarjeta) {

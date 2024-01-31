@@ -2,6 +2,7 @@ package es.eney_x.eney_x.controlador;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import java.util.List;
 
 import es.eney_x.eney_x.R;
 import es.eney_x.eney_x.modelo.Factura;
+import es.eney_x.eney_x.modelo.Usuario;
 
 public class FacturacionFacturaAdaptador extends RecyclerView.Adapter<FacturacionFacturaAdaptador.FacturacionViewHolder> {
 
@@ -37,18 +39,17 @@ public class FacturacionFacturaAdaptador extends RecyclerView.Adapter<Facturacio
     public void onBindViewHolder(@NonNull FacturacionViewHolder holder, int position) {
         Factura factura = listaFacturas.get(position);
 
-        holder.tvIdFactura.setText("ID Factura: " + "Tu id");
+        // Establecer el valor del campo ubicacion_factura en el TextView correspondiente
         holder.tvArchivosFactura.setText("Archivos Factura: " + factura.getUbicacion_factura());
-        holder.info.setText("A continuacion le presentamos información importante relacionada con la facturación");
+        holder.info.setText("A continuación le presentamos información importante relacionada con la facturación");
 
-        holder.tvIdFactura.setTypeface(null, Typeface.BOLD);
+        // Establecer estilos y colores de texto
         holder.tvArchivosFactura.setTypeface(null, Typeface.BOLD);
-
-        holder.tvIdFactura.setTextColor(context.getResources().getColor(R.color.botonVerde));
         holder.tvArchivosFactura.setTextColor(context.getResources().getColor(R.color.amarillito));
 
         holder.estado.setText(textoLicencia);
 
+        // Manejar eventos de clic en los elementos
         holder.cp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
