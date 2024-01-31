@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +38,7 @@ public class Activity_datos extends AppCompatActivity {
     FirebaseCallback firebaseCallback;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +59,7 @@ public class Activity_datos extends AppCompatActivity {
             }
         });
 
+        recyclerView = findViewById(R.id.recyclerViw);
 
         if ("      Licencias  ".equals(textoLicencia)) {
 
@@ -82,11 +87,9 @@ public class Activity_datos extends AppCompatActivity {
 
 
 
-            recyclerView = findViewById(R.id.recyclerViw);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             DispositivosAdaptr = new DispositivosAdaptador(this, listaDispositivos,textoLicencia);
             recyclerView.setAdapter(DispositivosAdaptr);
-
 
         } else if ("      Privacidad  ".equals(textoLicencia)) {
             List<Privacidad> listaPrivacidad = new ArrayList<>();
@@ -94,33 +97,47 @@ public class Activity_datos extends AppCompatActivity {
             listaPrivacidad.add(new Privacidad(true, false, true, false));
             listaPrivacidad.add(new Privacidad(false, false, false, false));
 
-
-            recyclerView = findViewById(R.id.recyclerViw);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             PrivacidadAdaptr = new PrivacidadAdaptador(this, listaPrivacidad,textoLicencia);
             recyclerView.setAdapter(PrivacidadAdaptr);
+
         }else if ("      Factura  ".equals(textoLicencia)) {
-            List<Factura> listFacturacion = new ArrayList<>();
-            listFacturacion.add(new Factura("Licencia Profesional"));
-            listFacturacion.add(new Factura("Licencia Profesional"));
-            listFacturacion.add(new Factura("Licencia Profesional"));
 
+            List<Factura> listaFacturas = new ArrayList<>();
 
-            recyclerView = findViewById(R.id.recyclerViw);
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            FacturaciaAdaptr = new FacturacionFacturaAdaptador(this, listFacturacion,textoLicencia);
+            for (Factura factura: Usuario.getInstance().getFacturacion().getFacturas()){
+                listaFacturas.add(new Factura(factura.getUbicacion_factura()));
+            }
+
+            recyclerView.setLayoutManager(new LinearLayoutManager(Activity_datos.this));
+            FacturaciaAdaptr = new FacturacionFacturaAdaptador(Activity_datos.this, listaFacturas, textoLicencia);
             recyclerView.setAdapter(FacturaciaAdaptr);
-        }else if ("      Pago  ".equals(textoLicencia)) {
-            List<MetodoPago> listaPago = new ArrayList<>();
-            listaPago.add(new MetodoPago("8/10", 789, "Martin Cristo Buda" , "46666666B"));
-            listaPago.add(new MetodoPago("9/10", 457, "Martin Cristo Buda" , "123456789012"));
-            listaPago.add(new MetodoPago("10/10", 146, "Martin Cristo Buda" , "1423456789041234"));
 
 
-            recyclerView = findViewById(R.id.recyclerViw);
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            PagoAdaptr = new FacturacionMetodoPagoAdaptador(this, listaPago,textoLicencia);
-            recyclerView.setAdapter(PagoAdaptr);
+        } else if ("      Pago  ".equals(textoLicencia)) {
+
+            Usuario usuario = Usuario.getInstance();
+            List<MetodoPago> listaPagos = usuario.getFacturacion().getMetodos_pago();
+
+            // Verificar si la lista de métodos de pago no está vacía
+            if (listaPagos != null && !listaPagos.isEmpty()) {
+                Log.d("Activity_datos", "Tamaño de listaPagos: " + listaPagos.size());
+                // Crear una nueva lista para almacenar los métodos de pago clonados
+                List<MetodoPago> listaClonada = new ArrayList<>();
+
+                for (MetodoPago pago : listaPagos) {
+                    listaClonada.add(new MetodoPago(pago.getCaducidad(), pago.getCsv(), pago.getNombre(), pago.getTarjeta()));
+                }
+
+                recyclerView = findViewById(R.id.recyclerViw);
+                recyclerView.setLayoutManager(new LinearLayoutManager(this));
+                PagoAdaptr = new FacturacionMetodoPagoAdaptador(this, listaClonada, textoLicencia);
+                recyclerView.setAdapter(PagoAdaptr);
+            } else {
+                // Manejar el caso en que no haya métodos de pago disponibles
+                Toast.makeText(this, "No hay métodos de pago disponibles", Toast.LENGTH_SHORT).show();
+                finish();
+            }
         }
     }
 }

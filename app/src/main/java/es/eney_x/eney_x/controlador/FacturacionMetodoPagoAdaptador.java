@@ -53,7 +53,6 @@ public class FacturacionMetodoPagoAdaptador extends RecyclerView.Adapter<Factura
 
         holder.estado.setText(textoLicencia);
 
-
         // Puedes personalizar la apariencia de los elementos según tus necesidades
 
         holder.cp.setOnClickListener(new View.OnClickListener() {
