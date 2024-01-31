@@ -8,15 +8,28 @@ public class Usuario {
     private String avatar = "";
     private String correo = "";
     private ArrayList<Dispositivo> dispositivos = new ArrayList<Dispositivo>();
-    private Facturacion facturacion;
+    private Facturacion facturacion = new Facturacion();
     private String fecha_nacimiento = "";
     private ArrayList<Licencia> licencias = new ArrayList<Licencia>();
     private String nombre = "";
     private String apellidos = "";
     private String password = "";
-    private Privacidad privacidad;
+    private Privacidad privacidad = new Privacidad();
 
     private Usuario() {
+    }
+
+    public Usuario(String avatar, String correo, ArrayList<Dispositivo> dispositivos, Facturacion facturacion, String fecha_nacimiento, ArrayList<Licencia> licencias, String nombre, String apellidos, String password, Privacidad privacidad) {
+        this.avatar = avatar;
+        this.correo = correo;
+        this.dispositivos = dispositivos;
+        this.facturacion = facturacion;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.licencias = licencias;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.password = password;
+        this.privacidad = privacidad;
     }
 
     public static synchronized Usuario getInstance(){

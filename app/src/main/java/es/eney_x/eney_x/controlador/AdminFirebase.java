@@ -82,7 +82,6 @@ public class AdminFirebase {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                // Maneja el error si ocurre.
                 Log.e("Firebase", "Error al leer datos: " + databaseError.getMessage());
                 callback.onFail(databaseError.toException());
             }

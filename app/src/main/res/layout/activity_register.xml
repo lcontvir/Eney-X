@@ -8,28 +8,30 @@
     tools:context=".vista.Activity_register">
 
 
-    <ImageView
-        android:id="@+id/iv_logo_eneyx"
-        android:layout_width="218dp"
-        android:layout_height="207dp"
-        android:layout_marginStart="232dp"
-        android:alpha=".3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoeneyx" />
-
     <TextView
         android:id="@+id/TvTextoTitulo"
         style="@style/RegisterMainTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
         android:text="Registro"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TvPongamonos"
+        style="@style/RegisterMainTheme"
+        android:layout_width="132dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:text="Pongamonos al dia!"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvTextoTitulo" />
 
     <Button
         android:id="@+id/BttonRegisterMe"
@@ -137,26 +139,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BttonRegisterMe" />
 
-    <TextView
-        android:id="@+id/TvPongamonos"
-        style="@style/RegisterMainTheme"
-        android:layout_width="132dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="11dp"
-        android:text="Pongamonos al dia!"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TvTextoTitulo" />
-
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="356dp"
-        android:layout_height="228dp"
+        android:layout_width="351dp"
+        android:layout_height="300dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="22dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TvPongamonos">
 

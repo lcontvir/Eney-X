@@ -81,7 +81,7 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
         nombre.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                //No hace falta implementarlo
             }
 
             @Override
@@ -103,14 +103,14 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                //No hace falta implementarlo
             }
         });
 
         apellidos.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                //No hace falta implementarlo
             }
 
             @Override
@@ -132,14 +132,14 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                //No hace falta implementarlo
             }
         });
 
         fechaNacimiento.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                //No hace falta implementarlo
             }
 
             @Override
@@ -161,14 +161,14 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                //No hace falta implementarlo
             }
         });
 
         correo.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                //No hace falta implementarlo
             }
 
             @Override
@@ -190,14 +190,14 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                //No hace falta implementarlo
             }
         });
 
         contrasena.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                //No hace falta implementarlo
             }
 
             @Override
@@ -266,7 +266,7 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                //No hace falta implementarlo
             }
         });
 
