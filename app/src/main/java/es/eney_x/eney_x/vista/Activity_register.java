@@ -32,10 +32,15 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
     protected EditText contrasena;
     protected TextView error;
 
+    /**
+     * Método llamado cuando se crea la actividad.
+     * Configura los elementos de la interfaz de usuario y establece los listeners necesarios.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
 
         go_to_login = findViewById(R.id.BttonGoToIniciarSesion);
         register_user = findViewById(R.id.BttonRegisterMe);
@@ -48,236 +53,295 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
         error = findViewById(R.id.TvError);
         error.setVisibility(View.GONE);
 
-        go_to_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Activity_register.this, Activity_login.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        register_user.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || fechaNacimiento.getText().toString().isEmpty() || correo.getText().toString().isEmpty() || contrasena.getText().toString().isEmpty()){
-                    error.setText("Tienes que rellenar todos los campos");
-                    error.setVisibility(View.VISIBLE);
-                    register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                    register_user.setClickable(false);
-                }
-                else{
-                    Usuario usuario = Usuario.getInstance();
-                    usuario.setCorreo(correo.getText().toString());
-                    usuario.setNombre(nombre.getText().toString());
-                    usuario.setApellidos(apellidos.getText().toString());
-                    usuario.setFecha_nacimiento(fechaNacimiento.getText().toString());
-                    usuario.setPassword(contrasena.getText().toString());
-                    RegistrarUsuario();
-                }
-            }
-        });
-
-        nombre.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                //No hace falta implementarlo
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String nombreTexto = s.toString();
-                if (nombreTexto.length() <= 0){
-                    register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                    register_user.setClickable(false);
-                    nombre.setBackground(getDrawable(R.drawable.edit_text_boder_red));
-                    nombre.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                }
-                else {
-                    register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
-                    register_user.setClickable(true);
-                    nombre.setBackground(getDrawable(R.drawable.edit_text_boder_green));
-                    nombre.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                //No hace falta implementarlo
-            }
-        });
-
-        apellidos.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                //No hace falta implementarlo
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String apellidosTexto = s.toString();
-                if (apellidosTexto.length() <= 0){
-                    register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                    register_user.setClickable(false);
-                    apellidos.setBackground(getDrawable(R.drawable.edit_text_boder_red));
-                    apellidos.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                }
-                else {
-                    register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
-                    register_user.setClickable(true);
-                    apellidos.setBackground(getDrawable(R.drawable.edit_text_boder_green));
-                    apellidos.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                //No hace falta implementarlo
-            }
-        });
-
-        fechaNacimiento.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                //No hace falta implementarlo
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String fechaNacimientoTexto = s.toString();
-                if (fechaNacimientoTexto.length() <= 0){
-                    register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                    register_user.setClickable(false);
-                    fechaNacimiento.setBackground(getDrawable(R.drawable.edit_text_boder_red));
-                    fechaNacimiento.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                }
-                else {
-                    register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
-                    register_user.setClickable(true);
-                    fechaNacimiento.setBackground(getDrawable(R.drawable.edit_text_boder_green));
-                    fechaNacimiento.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                //No hace falta implementarlo
-            }
-        });
-
-        correo.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                //No hace falta implementarlo
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String correoTexto = s.toString();
-                if (correoTexto.length() <= 0){
-                    register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                    register_user.setClickable(false);
-                    correo.setBackground(getDrawable(R.drawable.edit_text_boder_red));
-                    correo.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                }
-                else {
-                    register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
-                    register_user.setClickable(true);
-                    correo.setBackground(getDrawable(R.drawable.edit_text_boder_green));
-                    correo.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                //No hace falta implementarlo
-            }
-        });
-
-        contrasena.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                //No hace falta implementarlo
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String contrasenaTexto = s.toString();
-                if (contrasenaTexto.length() > 0){
-                    Pattern mayuscula = Pattern.compile("[A-Z]");
-                    Pattern minuscula = Pattern.compile("[a-z]");
-                    Pattern numero = Pattern.compile("[0-9]");
-                    Pattern simbolo = Pattern.compile("[!\\?*/\\-@#\\|]");
-
-                    Matcher mayusculaMatcher = mayuscula.matcher(contrasenaTexto);
-                    Matcher minusculaMatcher = minuscula.matcher(contrasenaTexto);
-                    Matcher numeroMatcher = numero.matcher(contrasenaTexto);
-                    Matcher simboloMatcher = simbolo.matcher(contrasenaTexto);
-
-                    if (contrasenaTexto.length() < 8) {
-                        error.setText("La contraseña debe contener al menos 8 caracteres");
-                        error.setVisibility(View.VISIBLE);
-                        register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                        register_user.setClickable(false);
-                        contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
-                        contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                    }
-                    else if (!mayusculaMatcher.find()) {
-                        error.setText("La contraseña debe contener al menos una letra mayúscula");
-                        error.setVisibility(View.VISIBLE);
-                        register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                        register_user.setClickable(false);
-                        contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
-                        contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                    }
-                    else if (!minusculaMatcher.find()) {
-                        error.setText("La contraseña debe contener al menos una letra minúscula");
-                        error.setVisibility(View.VISIBLE);
-                        register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                        register_user.setClickable(false);
-                        contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
-                        contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                    }
-                    else if (!numeroMatcher.find()) {
-                        error.setText("La contraseña debe contener al menos un número");
-                        error.setVisibility(View.VISIBLE);
-                        register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                        register_user.setClickable(false);
-                        contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
-                        contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                    }
-                    else if (!simboloMatcher.find()) {
-                        error.setText("La contraseña debe contener al menos un símbolo (!?*/-@#|)");
-                        error.setVisibility(View.VISIBLE);
-                        register_user.setBackgroundColor(Color.rgb(217, 17, 37));
-                        register_user.setClickable(false);
-                        contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
-                        contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
-                    }
-                    else{
-                        error.setVisibility(View.GONE);
-                        register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
-                        register_user.setClickable(true);
-                        contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_green));
-                        contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+        try {
+            // Configuración del listener para el botón de ir a iniciar sesión.
+            go_to_login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent;
+                    try {
+                        intent = new Intent(Activity_register.this, Activity_login.class);
+                        startActivity(intent);
+                        finish();
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 }
-            }
+            });
+            // Configuración del listener para el botón de registro de usuario.
+            register_user.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Usuario usuario;
 
-            @Override
-            public void afterTextChanged(Editable s) {
-                //No hace falta implementarlo
-            }
-        });
+                    try {
+                        if (nombre.getText().toString().isEmpty() || apellidos.getText().toString().isEmpty() || fechaNacimiento.getText().toString().isEmpty() || correo.getText().toString().isEmpty() || contrasena.getText().toString().isEmpty()) {
+                            error.setText("Tienes que rellenar todos los campos");
+                            error.setVisibility(View.VISIBLE);
+                            register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                            register_user.setClickable(false);
+                        } else {
+                            usuario = Usuario.getInstance();
+                            usuario.setCorreo(correo.getText().toString());
+                            usuario.setNombre(nombre.getText().toString());
+                            usuario.setApellidos(apellidos.getText().toString());
+                            usuario.setFecha_nacimiento(fechaNacimiento.getText().toString());
+                            usuario.setPassword(contrasena.getText().toString());
+                            RegistrarUsuario();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
 
+            // Configuración de listeners para validar la entrada del usuario en los campos de texto.
+            nombre.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    //No hace falta implementarlo
+                }
 
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    String nombreTexto;
 
+                    try {
+                        nombreTexto = s.toString();
+                        if (nombreTexto.length() <= 0) {
+                            register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                            register_user.setClickable(false);
+                            nombre.setBackground(getDrawable(R.drawable.edit_text_boder_red));
+                            nombre.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                        } else {
+                            register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
+                            register_user.setClickable(true);
+                            nombre.setBackground(getDrawable(R.drawable.edit_text_boder_green));
+                            nombre.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    //No hace falta implementarlo
+                }
+            });
+            // Configuración de listeners para validar la entrada del usuario en los campos de texto.
+            apellidos.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    //No hace falta implementarlo
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    String apellidosTexto;
+
+                    try {
+                        apellidosTexto = s.toString();
+                        if (apellidosTexto.length() <= 0) {
+                            register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                            register_user.setClickable(false);
+                            apellidos.setBackground(getDrawable(R.drawable.edit_text_boder_red));
+                            apellidos.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                        } else {
+                            register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
+                            register_user.setClickable(true);
+                            apellidos.setBackground(getDrawable(R.drawable.edit_text_boder_green));
+                            apellidos.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    //No hace falta implementarlo
+                }
+            });
+
+            // Configuración de listeners para validar la entrada del usuario en los campos de texto.
+            fechaNacimiento.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    //No hace falta implementarlo
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    String fechaNacimientoTexto;
+
+                    try {
+                        fechaNacimientoTexto = s.toString();
+                        if (fechaNacimientoTexto.length() <= 0) {
+                            register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                            register_user.setClickable(false);
+                            fechaNacimiento.setBackground(getDrawable(R.drawable.edit_text_boder_red));
+                            fechaNacimiento.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                        } else {
+                            register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
+                            register_user.setClickable(true);
+                            fechaNacimiento.setBackground(getDrawable(R.drawable.edit_text_boder_green));
+                            fechaNacimiento.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    //No hace falta implementarlo
+                }
+            });
+
+            // Configuración de listeners para validar la entrada del usuario en los campos de texto.
+
+            correo.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    //No hace falta implementarlo
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    String correoTexto;
+
+                    try {
+                        correoTexto = s.toString();
+                        if (correoTexto.length() <= 0) {
+                            register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                            register_user.setClickable(false);
+                            correo.setBackground(getDrawable(R.drawable.edit_text_boder_red));
+                            correo.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                        } else {
+                            register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
+                            register_user.setClickable(true);
+                            correo.setBackground(getDrawable(R.drawable.edit_text_boder_green));
+                            correo.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    //No hace falta implementarlo
+                }
+            });
+
+            // Configuración de listeners para validar la entrada del usuario en los campos de texto.
+
+            contrasena.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    //No hace falta implementarlo
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    String contrasenaTexto;
+                    Pattern mayuscula;
+                    Pattern minuscula;
+                    Pattern numero;
+                    Pattern simbolo;
+
+                    Matcher mayusculaMatcher;
+                    Matcher minusculaMatcher;
+                    Matcher numeroMatcher;
+                    Matcher simboloMatcher;
+
+                    try {
+
+                        contrasenaTexto = s.toString();
+                        if (contrasenaTexto.length() > 0) {
+                            mayuscula = Pattern.compile("[A-Z]");
+                            minuscula = Pattern.compile("[a-z]");
+                            numero = Pattern.compile("[0-9]");
+                            simbolo = Pattern.compile("[!\\?*/\\-@#\\|]");
+
+                            mayusculaMatcher = mayuscula.matcher(contrasenaTexto);
+                            minusculaMatcher = minuscula.matcher(contrasenaTexto);
+                            numeroMatcher = numero.matcher(contrasenaTexto);
+                            simboloMatcher = simbolo.matcher(contrasenaTexto);
+
+                            if (contrasenaTexto.length() < 8) {
+                                error.setText("La contraseña debe contener al menos 8 caracteres");
+                                error.setVisibility(View.VISIBLE);
+                                register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                                register_user.setClickable(false);
+                                contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
+                                contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                            } else if (!mayusculaMatcher.find()) {
+                                error.setText("La contraseña debe contener al menos una letra mayúscula");
+                                error.setVisibility(View.VISIBLE);
+                                register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                                register_user.setClickable(false);
+                                contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
+                                contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                            } else if (!minusculaMatcher.find()) {
+                                error.setText("La contraseña debe contener al menos una letra minúscula");
+                                error.setVisibility(View.VISIBLE);
+                                register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                                register_user.setClickable(false);
+                                contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
+                                contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                            } else if (!numeroMatcher.find()) {
+                                error.setText("La contraseña debe contener al menos un número");
+                                error.setVisibility(View.VISIBLE);
+                                register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                                register_user.setClickable(false);
+                                contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
+                                contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                            } else if (!simboloMatcher.find()) {
+                                error.setText("La contraseña debe contener al menos un símbolo (!?*/-@#|)");
+                                error.setVisibility(View.VISIBLE);
+                                register_user.setBackgroundColor(Color.rgb(217, 17, 37));
+                                register_user.setClickable(false);
+                                contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_red));
+                                contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                            } else {
+                                error.setVisibility(View.GONE);
+                                register_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
+                                register_user.setClickable(true);
+                                contrasena.setBackground(getDrawable(R.drawable.edit_text_boder_green));
+                                contrasena.setBackgroundTintMode(PorterDuff.Mode.MULTIPLY);
+                            }
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    //No hace falta implementarlo
+                }
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
+    /**
+     * Método para llevar a cabo el registro del usuario.
+     * Se encarga de comprobar la existencia del usuario y realizar el registro.
+     */
     public void RegistrarUsuario(){
-        AdminFirebase.ComprobarExistenciaUsuario(this);
-        register_user.setText("Registrando Usuario");
+        try{
+            AdminFirebase.ComprobarExistenciaUsuario(this);
+            register_user.setText("Registrando Usuario");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
+
+    // Implementación de métodos de la interfaz FirebaseCallback
 
     @Override
     public void onSucceed() {
@@ -301,13 +365,21 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
 
     @Override
     public void onNotFound() {
-        AdminFirebase.AltaUsuario(this);
+        try {
+            AdminFirebase.AltaUsuario(this);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onRegister() {
-        Intent intent = new Intent(Activity_register.this, Activity_checkin.class);
-        startActivity(intent);
-        finish();
+        try{
+            Intent intent = new Intent(Activity_register.this, Activity_checkin.class);
+            startActivity(intent);
+            finish();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

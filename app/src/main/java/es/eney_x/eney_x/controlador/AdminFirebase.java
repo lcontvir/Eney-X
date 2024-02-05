@@ -15,6 +15,11 @@ import es.eney_x.eney_x.modelo.Usuario;
 
 public class AdminFirebase {
 
+    /**
+     * Recupera la información del usuario desde la base de datos Firebase y actualiza el objeto Usuario.
+     *
+     * @param callback Interfaz de devolución de llamada para gestionar el resultado de la operación.
+     */
     public static void RecuperarUsuario(final FirebaseCallback callback){
         DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().RecuperarIdentificador());
         usuarioRef.addValueEventListener(new ValueEventListener() {
@@ -34,6 +39,11 @@ public class AdminFirebase {
         });
     }
 
+    /**
+     * Actualiza la información del usuario en la base de datos Firebase.
+     *
+     * @param callback Interfaz de devolución de llamada para gestionar el resultado de la operación.
+     */
     public static void ActualizarUsuario(final FirebaseCallback callback){
         DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().RecuperarIdentificador());
         usuarioRef.setValue(Usuario.getInstance(), new DatabaseReference.CompletionListener() {
@@ -50,6 +60,11 @@ public class AdminFirebase {
         });
     }
 
+    /**
+     * Registra un nuevo usuario en la base de datos Firebase.
+     *
+     * @param callback Interfaz de devolución de llamada para gestionar el resultado de la operación.
+     */
     public static void AltaUsuario(final FirebaseCallback callback){
         DatabaseReference BBDD = FirebaseDatabase.getInstance().getReference();
         Usuario usuario = Usuario.getInstance();
@@ -67,6 +82,11 @@ public class AdminFirebase {
         });
     }
 
+    /**
+     * Comprueba la existencia de un usuario en la base de datos Firebase.
+     *
+     * @param callback Interfaz de devolución de llamada para gestionar el resultado de la operación.
+     */
     public static void ComprobarExistenciaUsuario(final FirebaseCallback callback){
         FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
