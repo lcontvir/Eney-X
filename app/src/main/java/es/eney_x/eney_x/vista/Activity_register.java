@@ -1,7 +1,5 @@
 package es.eney_x.eney_x.vista;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -12,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -323,7 +323,7 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
                     //No hace falta implementarlo
                 }
             });
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -332,11 +332,11 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
      * Método para llevar a cabo el registro del usuario.
      * Se encarga de comprobar la existencia del usuario y realizar el registro.
      */
-    public void RegistrarUsuario(){
-        try{
+    public void RegistrarUsuario() {
+        try {
             AdminFirebase.ComprobarExistenciaUsuario(this);
             register_user.setText("Registrando Usuario");
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -367,18 +367,18 @@ public class Activity_register extends AppCompatActivity implements FirebaseCall
     public void onNotFound() {
         try {
             AdminFirebase.AltaUsuario(this);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @Override
     public void onRegister() {
-        try{
+        try {
             Intent intent = new Intent(Activity_register.this, Activity_checkin.class);
             startActivity(intent);
             finish();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

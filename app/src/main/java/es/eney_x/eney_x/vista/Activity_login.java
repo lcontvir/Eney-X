@@ -1,7 +1,5 @@
 package es.eney_x.eney_x.vista;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -55,10 +55,10 @@ public class Activity_login extends AppCompatActivity implements FirebaseCallbac
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                try{
+                try {
                     usuario_no_encontrado.setVisibility(View.GONE);
                     login_user.setBackgroundColor(getResources().getColor(R.color.botonMorado, getTheme()));
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -78,7 +78,7 @@ public class Activity_login extends AppCompatActivity implements FirebaseCallbac
                     intent = new Intent(Activity_login.this, Activity_register.class);
                     startActivity(intent);
                     finish();
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -88,13 +88,12 @@ public class Activity_login extends AppCompatActivity implements FirebaseCallbac
             @Override
             public void onClick(View view) {
                 Usuario usuario;
-                try{
+                try {
                     usuario = Usuario.getInstance();
                     usuario.setCorreo(correo.getText().toString());
                     usuario.setPassword(contraseña.getText().toString());
                     LoginUsuario();
-                }
-                catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -108,7 +107,7 @@ public class Activity_login extends AppCompatActivity implements FirebaseCallbac
      * @return true si el formato es válido, false de lo contrario.
      */
     public boolean ValidateEmail(String email) {
-        final Pattern pattern = Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+        Pattern pattern = Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
         Matcher matcher = null;
         Boolean result = false;
         try {
@@ -125,10 +124,10 @@ public class Activity_login extends AppCompatActivity implements FirebaseCallbac
      * Se encarga de comprobar la existencia del usuario y realizar el inicio de sesión.
      */
     public void LoginUsuario() {
-        try{
+        try {
             AdminFirebase.ComprobarExistenciaUsuario(this);
             login_user.setText("Iniciando Sesion");
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -136,9 +135,9 @@ public class Activity_login extends AppCompatActivity implements FirebaseCallbac
     // Implementación de métodos de la interfaz FirebaseCallback
     @Override
     public void onSucceed() {
-        try{
+        try {
             AdminFirebase.RecuperarUsuario(this);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -151,22 +150,22 @@ public class Activity_login extends AppCompatActivity implements FirebaseCallbac
     @Override
     public void onRecover() {
         Intent intent;
-        try{
+        try {
             intent = new Intent(Activity_login.this, Activity_checkin.class);
             startActivity(intent);
             finish();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @Override
     public void onNotFound() {
-        try{
+        try {
             usuario_no_encontrado.setVisibility(View.VISIBLE);
             login_user.setBackgroundColor(Color.rgb(217, 17, 37));
             login_user.setText("Iniciar Sesion");
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

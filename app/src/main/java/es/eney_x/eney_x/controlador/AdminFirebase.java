@@ -1,6 +1,6 @@
 package es.eney_x.eney_x.controlador;
 
-import  android.util.Log;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,7 +20,7 @@ public class AdminFirebase {
      *
      * @param callback Interfaz de devolución de llamada para gestionar el resultado de la operación.
      */
-    public static void RecuperarUsuario(final FirebaseCallback callback){
+    public static void RecuperarUsuario(final FirebaseCallback callback) {
         DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().RecuperarIdentificador());
         usuarioRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -31,6 +31,7 @@ public class AdminFirebase {
                     callback.onRecover();
                 }
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.e("FirebaseError", "Error al obtener datos del usuario: " + databaseError.getMessage());
@@ -44,7 +45,7 @@ public class AdminFirebase {
      *
      * @param callback Interfaz de devolución de llamada para gestionar el resultado de la operación.
      */
-    public static void ActualizarUsuario(final FirebaseCallback callback){
+    public static void ActualizarUsuario(final FirebaseCallback callback) {
         DatabaseReference usuarioRef = FirebaseDatabase.getInstance().getReference(Usuario.getInstance().RecuperarIdentificador());
         usuarioRef.setValue(Usuario.getInstance(), new DatabaseReference.CompletionListener() {
             @Override
@@ -65,7 +66,7 @@ public class AdminFirebase {
      *
      * @param callback Interfaz de devolución de llamada para gestionar el resultado de la operación.
      */
-    public static void AltaUsuario(final FirebaseCallback callback){
+    public static void AltaUsuario(final FirebaseCallback callback) {
         DatabaseReference BBDD = FirebaseDatabase.getInstance().getReference();
         Usuario usuario = Usuario.getInstance();
         BBDD.child(usuario.RecuperarIdentificador()).setValue(usuario, new DatabaseReference.CompletionListener() {
@@ -87,15 +88,15 @@ public class AdminFirebase {
      *
      * @param callback Interfaz de devolución de llamada para gestionar el resultado de la operación.
      */
-    public static void ComprobarExistenciaUsuario(final FirebaseCallback callback){
+    public static void ComprobarExistenciaUsuario(final FirebaseCallback callback) {
         FirebaseDatabase.getInstance().getReference().addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.hasChild(Usuario.getInstance().RecuperarIdentificador())){
+                if (dataSnapshot.hasChild(Usuario.getInstance().RecuperarIdentificador())) {
                     callback.onSucceed();
                     Log.d("Firebase", "Identificador encontrado en la base de datos.");
                 } else {
-                   callback.onNotFound();
+                    callback.onNotFound();
                     Log.d("Firebase", "Identificador no encontrado en la base de datos.");
                 }
             }
