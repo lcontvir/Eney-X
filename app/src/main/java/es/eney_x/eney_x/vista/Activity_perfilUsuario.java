@@ -8,17 +8,26 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.material.imageview.ShapeableImageView;
+
 import es.eney_x.eney_x.R;
 import es.eney_x.eney_x.modelo.Activity_datos;
 import es.eney_x.eney_x.modelo.Usuario;
 import es.eney_x.eney_x.modelo.Activity_datosFacturacion;
 
 public class Activity_perfilUsuario extends AppCompatActivity{
+
+    int indiceActual = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_usuario);
+        int[] imagenes ={R.drawable.penguin, R.drawable.robot, R.drawable.wolf};
 
+
+
+        ShapeableImageView imageButton = findViewById(R.id.PerfilUsuario);
         ImageButton Ajustes = findViewById(R.id.botonAjustes);
         ImageButton Home = findViewById(R.id.botonCasa);
         ImageButton Seguridad = findViewById(R.id.botonEscudo);
@@ -36,7 +45,13 @@ public class Activity_perfilUsuario extends AppCompatActivity{
 
         Nombre.setText(usuario.getNombre());
         Correo.setText(usuario.getCorreo());
-
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                indiceActual = (indiceActual + 1) % imagenes.length;
+                imageButton.setImageResource(imagenes[indiceActual]);
+            }
+        });
         Ajustes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
