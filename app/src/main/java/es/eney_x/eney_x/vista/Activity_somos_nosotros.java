@@ -31,6 +31,7 @@ public class Activity_somos_nosotros extends AppCompatActivity {
 
                 startActivity(intent);
                 finish();
+                //finish() destruye una actividad y no podrás acceder a ella hasta que la vuelvas a crear.
             }
 
 
